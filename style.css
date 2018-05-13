@@ -1,0 +1,106 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Arial";
+}
+.navbar{
+    position: fixed;
+    height: 80px;
+    overflow: none;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: rgb(41, 40, 40);
+    width: 100%;
+
+}
+.logo{
+    background: url(logo180.png) no-repeat 50% 50%;
+    background-size: contain;
+    width: 180px;
+    height: 80px;
+    float: left;
+    margin-left: 20px;
+}
+.menu{
+   position: absolute;
+    right:20px;
+ 
+}
+.menu a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+    margin-left: 20px;
+    transition: color .03s; 
+    text-transform: uppercase;
+    color: #575856;
+    align-content: center;
+
+}
+.menu a:hover{
+    color: #6ab04c;
+}
+.btn{
+    display: block;
+    position: absolute;
+    right: 20px;
+}
+.btn span{
+    display: none;
+     margin: 6px;
+     width: 40px;
+     height: 3px;
+     background-color: rgb(71, 69, 69);
+}
+
+.header{
+    width: 100%;
+    height: 600px;
+    background:url(bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-top: 80px;
+
+}
+.btn a:hover > span {
+    background: #6ab04c;
+}
+@media only screen and (max-width:600px){
+    .navbar{
+        overflow: visible;
+        background: rgb(41, 40, 40);
+        
+    }
+    .menu{
+        width:100%;
+        right:0;
+        top:80px;
+        background: rgb(41, 40, 40);
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .menu a{
+        display: block;
+        text-align: center;
+        margin-top: 0px;
+        padding: 20px;
+       
+    }
+    .btn span{
+        display: block;
+    }
+
+    .btn{
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        cursor:pointer;
+        
+    }
+    .show{
+        max-height: 500px;
+      
+     }
+}
