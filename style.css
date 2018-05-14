@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    font-family: "Arial";
+    font-family: 'Courier New', Courier, monospace;;
 }
 .navbar{
     position: fixed;
@@ -61,14 +61,15 @@ body{
     background-size: cover;
     margin-top: 80px;
     align-items : center;
-}
+}    
 .card{
     overflow: hidden;
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
+    margin-left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
     background-color:#333;
     opacity: 0.7;
+    box-shadow: 0 0 200px rgbaq(0,0,0,0.9) inset;
 }
 .buffer{
     width:100%;
@@ -76,20 +77,37 @@ body{
 }
 .buffer-img{
     width:100%;
-    height:10%;
+    height:8%;
 }
 .card-text{
     padding: 10px;
     text-align: center;
 }
+.name{
+    font-size: 125%;
+    font-style: bold;
+}
 
+.location{
+    font-size: 110%;
+    
+}
+.fa-github {
+    font-size: 200%;
+}
+.fa-linkedin{
+    font-size: 200%;
+}
 .img{
+    display: block;
     padding-top: 10%;
     margin-left: 25%;
     background:url('profile_picture.jpg') no-repeat 50% 50%;
     width: 50%;
     height: 50%;
     background-size: contain;
+    /*box-shadow: inset 0 0 10em rgb(0, 0, 0);*/
+
 }
 .btn a:hover > span {
     background: #6ab04c;
@@ -133,4 +151,12 @@ body{
         max-height: 500px;
       
      }
-}
+     .card{
+         overflow: visible;
+        width: 90vw;
+        height: 90vw;
+        margin-left: calc(50% - 90vw/2);
+        
+    }
+    
+   }
