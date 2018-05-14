@@ -60,7 +60,36 @@ body{
     background:url('bg.png') no-repeat 50% 50%;
     background-size: cover;
     margin-top: 80px;
+    align-items : center;
+}
+.card{
+    overflow: hidden;
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color:#333;
+    opacity: 0.7;
+}
+.buffer{
+    width:100%;
+    height:25%;
+}
+.buffer-img{
+    width:100%;
+    height:10%;
+}
+.card-text{
+    padding: 10px;
+    text-align: center;
+}
 
+.img{
+    padding-top: 10%;
+    margin-left: 25%;
+    background:url('profile_picture.jpg') no-repeat 50% 50%;
+    width: 50%;
+    height: 50%;
+    background-size: contain;
 }
 .btn a:hover > span {
     background: #6ab04c;
