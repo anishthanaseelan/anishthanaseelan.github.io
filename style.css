@@ -10,7 +10,7 @@ body{
     top: 0;
     display: flex;
     align-items: center;
-    background: rgb(41, 40, 40);
+    background: rgb(240, 239, 239);
     width: 100%;
 
 }
@@ -23,9 +23,11 @@ body{
     margin-left: 20px;
 }
 .menu{
-   position: absolute;
-    right:20px;
- 
+    position: absolute;
+    right:10%;
+    font-style: bold;
+    font-weight: 1000;
+    font-size: 120%;
 }
 .menu a{
     color: #333;
@@ -44,14 +46,14 @@ body{
 .btn{
     display: block;
     position: absolute;
-    right: 20px;
+    right: 10%;
 }
 .btn span{
     display: none;
      margin: 6px;
      width: 40px;
      height: 3px;
-     background-color: rgb(71, 69, 69);
+     background-color:#333;
 }
 
 .header{
@@ -61,15 +63,20 @@ body{
     background-size: cover;
     margin-top: 80px;
     align-items : center;
+    backdrop-filter: blur(5px);
+    /*backface-visibility: visible;*/
 }    
 .card{
+    
+    filter: initial;
     overflow: hidden;
     margin-left: calc(50% - 250px);
     width: 500px;
     height: 500px;
     background-color:#333;
     opacity: 0.7;
-    box-shadow: 0 0 200px rgbaq(0,0,0,0.9) inset;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #333 outset;
 }
 .buffer{
     width:100%;
@@ -82,48 +89,61 @@ body{
 .card-text{
     padding: 10px;
     text-align: center;
+    color:#ffffff;
+    
 }
 .name{
+
     font-size: 125%;
     font-style: bold;
+    font-weight: 800;
 }
 
 .location{
     font-size: 110%;
-    
 }
 .fa-github {
     font-size: 200%;
 }
 .fa-linkedin{
+    text-decoration: none;
     font-size: 200%;
 }
+.card-text a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .img{
-    display: block;
-    padding-top: 10%;
+    opacity:1;
+    border-radius: 50%;
+    /*display: inline-block;*/
+    /*padding-top: 10%;*/
     margin-left: 25%;
     background:url('profile_picture.jpg') no-repeat 50% 50%;
     width: 50%;
     height: 50%;
     background-size: contain;
-    /*box-shadow: inset 0 0 10em rgb(0, 0, 0);*/
+    box-shadow: inset 0 0 5em rgb(44, 44, 44);
 
 }
+.img:hover{
+    transition: all .5s ease 0s;
+    box-shadow: none;
+}
 .btn a:hover > span {
-    background: #6ab04c;
+    background: #ffffff;
 }
 
 @media only screen and (max-width:600px){
     .navbar{
         overflow: visible;
-        background: rgb(41, 40, 40);
-        
+        background: rgb(255, 255, 255);
     }
     .menu{
         width:100%;
         right:0;
         top:80px;
-        background: rgb(41, 40, 40);
+        background: rgb(255, 255, 255);
         overflow: hidden;
         max-height: 0;
     }
@@ -133,10 +153,10 @@ body{
         text-align: center;
         margin-top: 0px;
         padding: 20px;
-       
-    }
+   }
     .btn span{
         display: block;
+        background-color: #333
     }
 
     .btn{
@@ -145,18 +165,37 @@ body{
         margin: 0;
         padding: 10px;
         cursor:pointer;
-        
+  
     }
     .show{
+        
+        transition: all .6s;
         max-height: 500px;
       
      }
+
      .card{
-         overflow: visible;
-        width: 90vw;
-        height: 90vw;
-        margin-left: calc(50% - 90vw/2);
+        margin-left: 25%;
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+        /*margin-left: calc(50% - 90vw/2);*/
         
     }
+    .name{
+
+        font-size: 75%;
+        font-weight: 500;
+    }
     
+    .location{
+        font-size: 65%;
+    }
+    .fa-github {
+        font-size: 150%;
+    }
+    .fa-linkedin{
+        font-size: 150%;
+    }
+        
    }
