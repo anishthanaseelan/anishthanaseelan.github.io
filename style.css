@@ -1,18 +1,17 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    margin-top: 0%;
     font-family: 'Courier New', Courier, monospace;;
 }
 .navbar{
     position: fixed;
     height: 80px;
+    width: 100%;
     overflow: none;
     top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     background: rgb(240, 239, 239);
-    width: 100%;
-
 }
 .logo{
     background: url(logo180.png) no-repeat 50% 50%;
@@ -24,9 +23,8 @@ body{
 }
 .menu{
     position: absolute;
-    right:10%;
+    right:5%;
     font-style: bold;
-    font-weight: 1000;
     font-size: 120%;
 }
 .menu a{
@@ -56,36 +54,30 @@ body{
      background-color:#333;
 }
 
-.header{
-    width: 100%;
-    height: calc(100vh - 80px);
-/*    background:url('bg.png') no-repeat 50% 50%; */
+.intro-card{
+    top:80px;
+    background-color: #575856;
     background-size: cover;
+    overflow: hidden;
     margin-top: 80px;
-    align-items : center;
-    backdrop-filter: blur(5px);
-    /*backface-visibility: visible;*/
-}    
+ }
+ 
+
 .card{
     
-    filter: initial;
-    overflow: hidden;
+    filter: initial; 
+    margin-top: 10%;
     margin-left: calc(50% - 250px);
+    margin-bottom: 10%;
     width: 500px;
-    height: 500px;
+    height: 500px; 
     background-color:#333;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     border-radius: 5px;
     box-shadow: 0 0 10px #333 outset;
 }
-.buffer{
-    width:100%;
-    height:25%;
-}
-.buffer-img{
-    width:100%;
-    height:8%;
-}
+
+
 .card-text{
     padding: 10px;
     text-align: center;
@@ -93,19 +85,62 @@ body{
     
 }
 .name{
-
+    text-transform: uppercase;
     font-size: 125%;
     font-style: bold;
     font-weight: 800;
 }
 
-.location{
-    font-size: 110%;
+.title{
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 100%;
 }
 
+.expt-cards{
+    top:80px;
+    background-color: #575856;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 80px;
+    padding: 5%;
+ }
+
+.expt-card{
+    width: 500px;
+    height: 300px; 
+    background-color:#333;
+    border-radius: 5px;
+
+}
+
+.expt-title{
+    text-transform: uppercase;
+    font-size: 125%;
+    font-style: bold;
+    font-weight: 800;
+    color: #6ab04c;
+    text-align: center;
+    padding: 5%;
+}
+
+.expt-desc{
+    font-style: bold;
+    font-size: 100%;
+    color:#ffffff;
+    padding: 5%;
+}
+
+.card-space{
+    padding: 5%;
+    margin: 5%;
+}
+
+
+
 .footer{
-    margin-top: calc(5%);
-    margin-bottom: calc(5%);
+    height: 20%;
+    margin-top: calc(5%); 
     margin-left: calc(50% - 20px);   
 }
 .footer a{
@@ -127,19 +162,18 @@ body{
 .fa-linkedin{
     font-size: 200%;
 }
+.card-text{
+    padding-top: 10%;
+    padding-bottom  : 10%;
+}
 .card-text a{
     text-decoration: none;
     color: #ffffff;
 }
 .img{
-    opacity:1;
-    border-radius: 50%;
-    /*display: inline-block;*/
-    /*padding-top: 10%;*/
-    margin-left: 25%;
-    /*background:url('profile_picture.jpg') no-repeat 50% 50%; */
-    width: 50%;
-    height: 50%;    
+/*    border-radius: 50%;*/
+    width: 100%;
+    height: 60%;    
     background-size: contain;
     box-shadow: inset 0 0 5em rgb(44, 44, 44);
 }
@@ -153,7 +187,7 @@ body{
     background: #ffffff;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:700px){
     .navbar{
         overflow: visible;
         background: rgb(255, 255, 255);
@@ -194,22 +228,29 @@ body{
      }
 
      .card{
-        margin-left: 25%;
-        width: 50%;
-        height: 50%;
+        margin-top: 80px;
+        margin-left: calc(50% - 125px);
+        margin-bottom: 80px;
+
+        width: 250px;
+        height: 250px;
         overflow: hidden;
-        /*margin-left: calc(50% - 90vw/2);*/
-        
+       
     }
+    .card-text{
+        padding-top: 10%;
+        padding-bottom  : 10%;
+    }
+    
     .name{
 
         font-size: 75%;
         font-weight: 500;
     }
-    
-    .location{
-        font-size: 65%;
+    .title{
+        font-size: 50%;
     }
+        
     .footer{
         margin-top: calc(5%);
         margin-bottom: calc(5%);
@@ -225,12 +266,13 @@ body{
         text-decoration: none;
         font-size: 65%;
         color: #333;
-        margin-left: calc(-30px);  
-        
+        margin-left: calc(-30px);        
     }
+
     .fa-github {
         font-size: 150%;
     }
+
     .fa-linkedin{
         font-size: 150%;
     }
