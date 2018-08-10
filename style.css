@@ -27,6 +27,22 @@ body{
     font-style: bold;
     font-size: 120%;
 }
+.menu_home{
+
+}
+
+.menu_expr{
+
+}
+
+.menu_acad{
+
+}
+
+.menu_contact{
+
+}
+
 .menu a{
     color: #333;
     text-decoration: none;
@@ -53,9 +69,12 @@ body{
      height: 3px;
      background-color:#333;
 }
+.intro-card-hide{
+    display: hidden;
+}
 
 .intro-card{
-    /*display: none; */
+    display: block;
     height: calc(90% - 80px);  
     background-color: #333;
     background-size: cover;
@@ -103,7 +122,11 @@ body{
 }
 
 .expt-cards{
-display: none; 
+    display: Block;
+}
+
+.expt-cards-hide{
+    display: none;
     top:80px;
     background-color: #575856;
     background-size: cover;
@@ -117,7 +140,6 @@ display: none;
     height: 300px; 
     background-color:#333;
     border-radius: 5px;
-
 }
 
 .expt-title{

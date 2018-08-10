@@ -22,13 +22,13 @@
             </a>
         </div>
         <div class="menu">
-            <a href="./index.html">Home</a>
-            <a href="#">Expertise</a>
-            <a href="#">Acadamics</a>
-            <a href="#">Contact Me</a>
+            <a class ="menu_home" href="#">Home</a>
+            <a class ="menu_expr" href="#">Expertise</a>
+            <a class ="menu_acad" href="#">Acadamics</a>
+            <a class ="menu_contact" href="#">Contact Me</a>
         </div>
     </div>
-    <div class="intro-card">
+    <div class="intro-card" id ="intro-card">
         <div class="card">
             <div class="img"></div>
             <div class="card-text">
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="expt-cards">
+    <div class="expt-cards-hide" id="expt-cards">
         <div class-"card-space" ></div>
         <div class="expt-card">
             <div class="expt-title">Longterm application development support</div>
@@ -86,6 +86,27 @@
     $(".btn").on("click", function () {
         $('.menu').toggleClass("show");
     })
+    $(".menu_home").on("click", function () {
+        console.log(document.getElementById("intro-card").hidden );
+        console.log(document.getElementById("expt-cards").hidden);
+            if (document.getElementsByClassName("intro-card").item("display") == null) {                
+                $('.intro-card').toggleClass("intro-card-hide");
+            }
+            if (document.getElementsByClassName("expt-cards-hode").item("display") != null) {
+                $('.expt-cards-hide').toggleClass("expt-cards");
+            }
+        })
+        $(".menu_expr").on("click", function () {
+            console.log(document.getElementsByClassName("intro-card").item("display"));
+            console.log(document.getElementsByClassName("expt-cards-hide").item("display"));
+            if (document.getElementsByClassName("expt-cards-hide").item("display") != null) {                
+                $('.expt-cards-hide').toggleClass("expt-cards");
+            }
+            if (document.getElementsByClassName("intro-card").item("display") == null) {
+                $('.intro-card').toggleClass("intro-card-hide");
+            }
+
+        })
 </script>
 </body>
 
