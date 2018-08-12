@@ -77,7 +77,9 @@ body{
     background-color: #333;
     background-size: cover;
     overflow: hidden;
-    padding-bottom: 2%;
+    padding-bottom: 2%; 
+    padding-left: 2%;   
+    padding-right: 2%;
  }
 
 .card{
@@ -119,12 +121,14 @@ body{
 }
 
 .expt-card{
-    width: 400px;
-    height: 300px; 
+    width: calc(33%);
+    height: calc(50%); 
     background-color:rgb(0, 0, 0);
     border-radius: 5px;
-    padding-top: 5%;
-    padding-left: 1%;
+    display: inline-table;
+    background-size: contain;
+    text-align: center;
+
 }
 
 .expt-title{
@@ -134,14 +138,17 @@ body{
     font-weight: 800;
     color: #6ab04c;
     text-align: center;
-    padding: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .expt-desc{
     font-style: bold;
     font-size: 100%;
     color:#ffffff;
-    padding: 1%;
+    padding: 2%;
 }
 
 .footer{
