@@ -103,27 +103,17 @@
         <div class="card-container" id="acad-container">
             <div class="expt-card">
                 <div class="expt-title">Degrees</div>
-                <div class="expt-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet
-                    auctor
-                    tellus
-                    in cursus. Nullam pretium tellus dolor, quis eleifend leo finibus non. Duis fringilla mauris
-                    eget
-                    nunc
-                    volutpat venenatis. Mauris et ex nec turpis auctor luctus vel in felis. Nam nec blandit
-                    eros. Duis
-                    cursus egestas tristique. Donec laoreet. </div>
+                <div class="expt-desc">
+                    <p>Master of Science (MS) in Software Engineering from Birla Institute of Technology, Pilani</p>
+                    <p>Bachelor of Engineering (BE) in Electronics and Communication from Anna University, Chennai</p>
+                </div>
             </div>
             <div class="expt-card">
                 <div class="expt-title">Certificates</div>
-                <div class="expt-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet
-                    auctor
-                    tellus
-                    in cursus. Nullam pretium tellus dolor, quis eleifend leo finibus non. Duis fringilla mauris
-                    eget
-                    nunc
-                    volutpat venenatis. Mauris et ex nec turpis auctor luctus vel in felis. Nam nec blandit
-                    eros. Duis
-                    cursus egestas tristique. Donec laoreet. </div>
+                <div class="expt-desc">
+                    <p>TOGAF® 9 Certification from The Open Group</p>
+                    <p>Certified SAFe® 4 Agilist (SA) from Scaled Agile, Inc.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -154,9 +144,18 @@
     document.getElementById("contact-cards").style.display = "none";
     document.getElementById("intro-card").style.display = "block";
 
+
+    /*
+        document.getElementById("expt-cards").style.display = "block";
+        document.getElementById("acad-cards").style.display = "block";
+        document.getElementById("contact-cards").style.display = "block";
+        document.getElementById("intro-card").style.display = "block";
+    */
+
     $(".btn").on("click", function () {
         $('.menu').toggleClass("show");
     })
+
     $(".menu_home").on("click", function () {
         document.getElementById("expt-cards").style.display = "none";
         document.getElementById("acad-cards").style.display = "none";
@@ -169,7 +168,6 @@
         document.getElementById("acad-cards").style.display = "none";
         document.getElementById("contact-cards").style.display = "none";
         document.getElementById("expt-cards").style.display = "block";
-
         $('.menu').toggleClass("show");
     })
     $(".menu_acad").on("click", function () {
@@ -177,7 +175,6 @@
         document.getElementById("expt-cards").style.display = "none";
         document.getElementById("contact-cards").style.display = "none";
         document.getElementById("acad-cards").style.display = "block";
-
         $('.menu').toggleClass("show");
     })
     $(".menu_contact").on("click", function () {
