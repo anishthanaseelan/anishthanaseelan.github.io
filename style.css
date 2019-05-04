@@ -1,5 +1,6 @@
 body{
     margin-top: 0%;
+    margin-left: 0%;
     font-family: 'Courier New', Courier, monospace;;
 }
 .navbar{
@@ -7,6 +8,7 @@ body{
     height: 80px;
     width: 100%;
     overflow: none;
+    z-index: 2;
     top: 0;
     left: 0;
     display: flex;
@@ -27,21 +29,7 @@ body{
     font-style: bold;
     font-size: 120%;
 }
-.menu_home{
 
-}
-
-.menu_expr{
-
-}
-
-.menu_acad{
-
-}
-
-.menu_contact{
-
-}
 
 .menu a{
     color: #333;
@@ -71,27 +59,25 @@ body{
 }
 
 .page-content{
-    
-    display: block;
-    height: calc(90% - 80px);  
+    position: fixed;
+    top: 80px ;
+    height: calc(95% - 80px);  
+    width: 100%;
     background-color: #333;
     background-size: cover;
-    overflow: hidden;
-    padding-top : calc( 2% + 80px );
-    padding-bottom: 2%; 
-    padding-left: 2%;   
-    padding-right: 2%;
+    overflow: scroll;
  }
 
 .card{
+
     filter: initial; 
     margin-left: calc(50% - 250px);
+    margin-top: 10%;
     width: 500px;
     height: 700px; 
     background-color:rgb(0, 0, 0);
-    /* opacity: 0.7; */
     border-radius: 5px;
-    box-shadow: 0 0 10px #333 outset;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
 }
 
 .img{
@@ -125,17 +111,32 @@ body{
     width: 100px;
 }
 .expt-card{
+
     width: 300px;
     height: 250px;
     background-color:rgb(0, 0, 0);
     border-style:solid;
     border-color: #333;
-    border-radius: 8px;
+    border-radius: 12px;
     border-width: 7px;
-
     display: inline-table;
-    background-size: cover;
-    vertical-align: middle;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
+
+}
+
+#contact-desc a{
+    text-decoration: none;
+    color: gainsboro;
+    font-size: 400%;
+}
+
+.card-container{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-table;
+    overflow: scroll;
 }
 
 .expt-title{
@@ -160,9 +161,12 @@ body{
 }
 
 .footer{
-    height: calc(10%);
-    margin-top: calc(2%); 
-    margin-left: calc(50% - 20px);   
+    z-index: 2;
+    position: fixed;
+    top: calc(96%); 
+    left: calc(50% - 120px);   
+    height: calc(5%);
+    text-align: center;
 }
 .footer a{
     text-decoration: none;
@@ -268,22 +272,9 @@ body{
         font-size: 50%;
     }
         
-    .footer{
-        margin-top: calc(5%);
-        margin-bottom: calc(5%);
-        margin-left: calc(50% - 20px);   
-    }
-    .footer a{
-        text-decoration: none;
-        color: #333;
-        align-content: center;    
-    }
-    
+   
     .footer p{
-        text-decoration: none;
         font-size: 65%;
-        color: #333;
-        margin-left: calc(-30px);        
     }
 
     .fa-github {
