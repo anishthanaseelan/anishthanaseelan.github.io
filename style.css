@@ -143,6 +143,10 @@ body{
 
     width:980px;
     left: calc(50% - 490px) ;
+    white-space: 0px;
+}
+.text{
+    font-size: 0px;
 }
 #acad-container{
     width:660px;
