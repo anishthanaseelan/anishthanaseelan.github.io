@@ -5,7 +5,7 @@ body{
 }
 .navbar{
     position: fixed;
-    height: 80px;
+    height: 60px;
     width: 100%;
     overflow: none;
     z-index: 2;
@@ -19,7 +19,7 @@ body{
     background: url(logo180_inv.png) no-repeat 50% 50%;
     background-size: contain;
     width: 180px;
-    height: 80px;
+    height: 60px;
     float: left;
     margin-left: 8px;
 }
@@ -60,8 +60,8 @@ body{
 
 .page-content{
     position: fixed;
-    top: 80px ;
-    height: calc(95% - 80px);  
+    top: 60px ;
+    height: calc(97% - 60px);  
     width: 100%;
     background-color: #333;
     background-size: cover;
@@ -125,6 +125,10 @@ body{
 
 }
 
+.card-icons{
+    font-size: 300%;
+}
+
 #contact-desc a{
     text-decoration: none;
     color: gainsboro;
@@ -172,11 +176,11 @@ body{
 
 .footer{
     z-index: 2;
-    font-size: 90%;
+    font-size: 85%;
     position: fixed;
-    top: calc(97%); 
+    top: calc(98%); 
     right: 2%;   
-    height: calc(5%);
+    height: calc(3%);
     text-align: center;
 }
 .card-text{
@@ -212,7 +216,7 @@ body{
     .menu{
         width:100%;
         right:0;
-        top:80px;
+        top:60px;
         background: rgb(255, 255, 255);
         overflow: hidden;
         max-height: 0;
@@ -235,7 +239,7 @@ body{
         cursor:pointer;
     }
     .show{
-        transition: all .6s;
+        transition: all .3s;
         max-height: 500px;
      }
      .card{
