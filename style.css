@@ -69,15 +69,16 @@ body{
  }
 
 .card{
-    z-index: -1;
-    filter: initial; 
-    margin-left: calc(50% - 250px);
-    margin-top: 3%;
+
+
     width: 500px;
     height: 700px; 
+    margin-left: calc(50% - 250px);
+    margin-top: calc(50vh - 350px - 60px );
     background-color:rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
+    overflow: scroll;
 }
 
 .img{
@@ -86,6 +87,7 @@ body{
     border-radius: 5px;
     background: url(profile_picture.jpg) no-repeat 50% 50%;
     background-size: contain;
+    overflow: scroll;
 }
 
 .card-text{ 
@@ -248,6 +250,7 @@ body{
      }
      .card{
         margin-left: calc(50% - 125px);
+        margin-top: calc(50vh - 175px - 30px );
         width: 250px;
         height: 350px; 
     }
@@ -321,6 +324,7 @@ body{
         width: 600px;
         height: 300px; 
         margin-left: calc(50% - 300px);
+        margin-top: calc(50vh - 150px - 30px );
     }
     .card-text{
         width: 300px;
