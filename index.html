@@ -5,18 +5,18 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139632377-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'UA-139632377-1');
+        gtag('config', 'UA-139632377-1');
     </script>
 
     <meta charset="utf-8">
     <title> Anish Thanaseelan Kaspaar</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width , initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -63,31 +63,36 @@
                     <i class="fab fa-react card-icons"></i>
                     <i class="fab fa-python card-icons"></i>
                 </div>
-            </div><div class="expt-card">
+            </div>
+            <div class="expt-card">
                 <div class="expt-title">Algorithm design</div>
                 <div class="expt-desc">Throughout my development career, I have designed and developed some of the time
                     critical, logically complex algorithms for the effective operation of a Warehouses. I have used many
                     performance measurement methods like order of execution and other statistical methods, to tune and
                     improve the performance of the algorithms
                 </div>
-            </div><div class="expt-card">
+            </div>
+            <div class="expt-card">
                 <div class="expt-title">Multi-Year Multi-Vendor collaboration </div>
                 <div class="expt-desc">I have worked in several multiyear projects which are done in collaboration with
                     multiple vendor from across different geographies of the world, which also comprises of people from
                     different culture and ethnicity. I am a strong believer of <i>“Making oneself redundant”</i> and
                     have ripped the benefit of the same throughout my career </div>
-            </div><div class="expt-card">
+            </div>
+            <div class="expt-card">
                 <div class="expt-title">Client facing and Stakeholder management</div>
                 <div class="expt-desc"> As a TOGAF® Certified Solution Architect I have been facing clients and managing
                     stakeholders for past 8 years. I have worked with clients from multiple continents and managed their
                     expectations and done Risk and Escalation management as well.
                 </div>
-            </div><div class="expt-card">
+            </div>
+            <div class="expt-card">
                 <div class="expt-title">Agile Specialist</div>
                 <div class="expt-desc">I am a Scaled Agile certified specialist, and been practicing the same in
                     different roles of agile for the past 8 years. I have helped businesses who never experienced agile
                     development before transition in to Agile development</div>
-            </div><div class="expt-card">
+            </div>
+            <div class="expt-card">
                 <div class="expt-title">SME in Warehouse Management</div>
                 <div class="expt-desc">I have 11 years of experience in warehouse management systems I have developed
                     application for more than 5 unique markets accords different continents. I have customizing and
@@ -138,7 +143,7 @@
 
 <script type="text/javascript">
 
-    PageToggle("home");
+    PageToggle("init");
 
 
     $(".btn").on("click", function () {
@@ -192,10 +197,13 @@
                 document.getElementById("contact-cards").style.display = "block";
                 break;
             default:
-                PageToggle("home");
+                document.getElementById("menu_home").style.color = "#6ab04c";
+                document.getElementById("intro-card").style.display = "block";
                 break;
         }
-        $('.menu').toggleClass("show");
+        if (pageId != "init") {
+            $('.menu').toggleClass("show");
+        }
     }
 
 </script>
