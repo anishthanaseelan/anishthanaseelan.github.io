@@ -249,7 +249,7 @@ body{
      }
      .card{
         margin-left: calc(50% - 125px);
-        margin-top: calc(50vh - 175px - 50px );
+        margin-top: calc(50vh - 175px - 40px );
         width: 250px;
         height: 350px; 
     }
@@ -283,7 +283,7 @@ body{
             top:30px;   
         }
         .card{
-            margin-top: calc(50vh - 175px + 25px );
+            margin-top: calc(50vh - 175px - 25px );
         }
     }
 }
@@ -325,7 +325,7 @@ body{
         width: 600px;
         height: 300px; 
         margin-left: calc(50% - 300px);
-        margin-top: calc(50vh - 150px - 25px );
+        margin-top: calc(50vh - 150px - 40px );
     }
     .card-text{
         width: 300px;
@@ -348,4 +348,10 @@ body{
         padding-top: 20%;
         font-size: 75%;
     }
+    @media only screen and (max-height:500px){
+        .card{
+            margin-top: calc(50vh - 150px - 25px );
+        }
+    }
+
 }
