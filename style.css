@@ -78,7 +78,7 @@ body{
     background-color:rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
-    overflow: scroll;
+
 }
 
 .img{
@@ -87,7 +87,6 @@ body{
     border-radius: 5px;
     background: url(profile_picture.jpg) no-repeat 50% 50%;
     background-size: contain;
-    overflow: scroll;
 }
 
 .card-text{ 
