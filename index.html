@@ -36,6 +36,7 @@
             <a class="menu_home" id="menu_home" href="#">Home</a>
             <a class="menu_expr" id="menu_expr" href="#">Expertise</a>
             <a class="menu_acad" id="menu_acad" href="#">Academics</a>
+            <a class="menu_work" id="menu_work" href="#">Works</a>
             <a class="menu_contact" id="menu_contact" href="#">Contact</a>
         </div>
     </div>
@@ -122,6 +123,49 @@
         </div>
     </div>
 
+    <div class="page-content" id="work-cards">
+        <div class="card-container" id="work-container">
+            <div class="expt-card">
+                <div class="expt-title">My Profile Web page</div>
+                <div class="expt-desc">
+                    <p>This profile page is created with simple and minimalistic approach in mind. The page design
+                        reflects beginning of my development carrier, and my love for UNIX. </p>
+                    <p>Technologies : HTML, Javascript and CSS </p>
+                    <p>Web Link : <a href="https://anishthanaseelan.github.io">Click Here</a> </p>
+                </div>
+            </div>
+            <div class="expt-card">
+                <div class="expt-title">A Simple Android App : Things To Do</div>
+                <div class="expt-desc">
+                    <p>This is a simple To Do app, to organize one's daily tasks. This is a standalone app is designed
+                        keeping platform agnostics in mind </p>
+                    <p>Technologies : Javascript, CSS, Cordova and HTML </p>
+                    <p>App Link : <a
+                            href="https://play.google.com/store/apps/details?id=com.theworldisaw.thingstodo&hl=en_GB">Click
+                            Here</a> </p>
+                </div>
+            </div>
+            <div class="expt-card">
+                <div class="expt-title">Carrier Integration Platform</div>
+                <div class="expt-desc">
+                    <p>This is a group of cloud ready, B2B, applications developed on Service Oriented Architecture, to
+                        help automate and manage the transaction to and from carriers like UPS, FedEx, and USPS, under
+                        one platform. </p>
+                    <p>Technologies : Java, Javascript, CSS, HTML and XSLT </p>
+                    <p>GitHub Link : <a href="https://github.com/anishthanaseelan/cip">Click Here</a> </p>
+                </div>
+            </div>
+            <div class="expt-card">
+                <div class="expt-title">Coding Chalanges</div>
+                <div class="expt-desc">
+                    <p>This is me taking on some casual coding chalanges from adventofcode.com and coderbyte.com </p>
+                    <p>Technologies : Java, Javascript and Perl </p>
+                    <p>GitHub Link : <a href="https://github.com/anishthanaseelan/coding_challenges">Click Here</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="page-content" id="contact-cards">
         <div class="card-container" id="contact-container">
             <div class="expt-card">
@@ -162,6 +206,9 @@
     $(".menu_contact").on("click", function () {
         PageToggle("contact");
     })
+    $(".menu_work").on("click", function () {
+        PageToggle("work");
+    })
     $(".logo").on("click", function () {
         PageToggle("home");
 
@@ -172,11 +219,13 @@
         document.getElementById("expt-cards").style.display = "none";
         document.getElementById("acad-cards").style.display = "none";
         document.getElementById("contact-cards").style.display = "none";
+        document.getElementById("work-cards").style.display = "none";
 
         document.getElementById("menu_home").style.color = "#333";
         document.getElementById("menu_expr").style.color = "#333";
         document.getElementById("menu_acad").style.color = "#333";
         document.getElementById("menu_contact").style.color = "#333";
+        document.getElementById("menu_work").style.color = "#333";
 
         //Toggle
         switch (pageId) {
@@ -195,6 +244,10 @@
             case "contact":
                 document.getElementById("menu_contact").style.color = "#6ab04c";
                 document.getElementById("contact-cards").style.display = "block";
+                break;
+            case "work":
+                document.getElementById("menu_work").style.color = "#6ab04c";
+                document.getElementById("work-cards").style.display = "block";
                 break;
             default:
                 document.getElementById("menu_home").style.color = "#6ab04c";

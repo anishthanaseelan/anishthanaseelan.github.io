@@ -154,6 +154,10 @@ body{
 .text{
     font-size: 0px;
 }
+#work-container{
+    width:660px;
+    left: calc(50% - 330px) ;
+}
 #acad-container{
     width:660px;
     left: calc(50% - 330px) ;
@@ -274,6 +278,10 @@ body{
         left: calc(50% - 165px) ;
     }
     #acad-container{
+        width:330px;
+        left: calc(50% - 165px) ;
+    }
+    #work-container{
         width:330px;
         left: calc(50% - 165px) ;
     }
