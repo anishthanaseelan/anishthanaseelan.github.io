@@ -33,26 +33,29 @@
             </a>
         </div>
         <div class="menu">
-            <a class="menu_home" id="menu_home" href="#">Home</a>
-            <a class="menu_expr" id="menu_expr" href="#">Expertise</a>
-            <a class="menu_acad" id="menu_acad" href="#">Academics</a>
-            <a class="menu_work" id="menu_work" href="#">Works</a>
-            <a class="menu_contact" id="menu_contact" href="#">Contact</a>
+            <a class="menu_home" id="menu_home" href="#intro-card">Home</a>
+            <a class="menu_expr" id="menu_expr" href="#expt-cards">Expertise</a>
+            <a class="menu_acad" id="menu_acad" href="#acad-cards">Academics</a>
+            <a class="menu_work" id="menu_work" href="#work-cards">Works</a>
+            <a class="menu_contact" id="menu_contact" href="#contact-cards">Contact</a>
         </div>
     </div>
-    <div class="page-content" id="intro-card">
+    <section id="intro-card">
+        <div class="section-name">About Me</div>
         <div class="card">
             <div class="img"></div>
             <div class="card-text">
                 <p class="name">Anish Thanaseelan Kaspaar</p>
-                <p class="title">I am a passionate Software developer who does Solution Architecture and Consulting for
-                    Retail Warehouse Management systems </p>
+                <p class="title"> I am a TOGAF and Azure Certified Senior Solution Architect who has 18 years experiance
+                    in Retail, Supply Chain and Logistics Industry.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="page-content" id="expt-cards">
+    <section id="expt-cards">
+
         <div class="card-container">
+            <div class="section-name">My Expertise</div>
             <div class="expt-card">
                 <div class="expt-title">Application development</div>
                 <div class="expt-desc">I have 13 years of application development experience in various tech stacks
@@ -102,9 +105,10 @@
                     Warehouse automation systems as well. </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="page-content" id="acad-cards">
+    <section id="acad-cards">
+        <div class="section-name">My Educational Qualifications</div>
         <div class="card-container" id="acad-container">
             <div class="expt-card">
                 <div class="expt-title">Degrees</div>
@@ -122,9 +126,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="page-content" id="work-cards">
+    <section id="work-cards">
+        <div class="section-name">My Work Experiance</div>
         <div class="card-container">
             <div class="expt-card">
                 <div class="expt-title">My Profile Web page</div>
@@ -174,9 +179,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="page-content" id="contact-cards">
+    <section id="contact-cards">
+        <div class="section-name">How to Reach Me</div>
         <div class="card-container" id="contact-container">
             <div class="expt-card">
                 <div class="expt-title">Social Media</div>
@@ -188,41 +194,42 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="footer" id="footer">
-        © Anish Kaspaar 2020
+        © Anish Kaspaar 2025
     </div>
 </body>
 
 <script type="text/javascript">
-
-    PageToggle("init");
-
-
-    $(".btn").on("click", function () {
-        $('.menu').toggleClass("show");
-    })
-
-    $(".menu_home").on("click", function () {
-        PageToggle("home");
-    })
-    $(".menu_expr").on("click", function () {
-        PageToggle("expr");
-    })
-    $(".menu_acad").on("click", function () {
-        PageToggle("acad");
-    })
-    $(".menu_contact").on("click", function () {
-        PageToggle("contact");
-    })
-    $(".menu_work").on("click", function () {
-        PageToggle("work");
-    })
-    $(".logo").on("click", function () {
-        PageToggle("home");
-
-    })
+    /*
+        PageToggle("init");
+    
+    
+        $(".btn").on("click", function () {
+            $('.menu').toggleClass("show");
+        })
+    
+        $(".menu_home").on("click", function () {
+            PageToggle("home");
+        })
+        $(".menu_expr").on("click", function () {
+            PageToggle("expr");
+        })
+        $(".menu_acad").on("click", function () {
+            PageToggle("acad");
+        })
+        $(".menu_contact").on("click", function () {
+            PageToggle("contact");
+        })
+        $(".menu_work").on("click", function () {
+            PageToggle("work");
+        })
+        $(".logo").on("click", function () {
+            PageToggle("home");
+    
+        })
+            */
     function PageToggle(pageId) {
         //Initialize
         document.getElementById("intro-card").style.display = "none";

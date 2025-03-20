@@ -1,10 +1,15 @@
-body{
+body {
     margin-top: 0%;
     margin-left: 0%;
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Courier New', Courier, monospace;
+    ;
 }
 
-.navbar{
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
     position: fixed;
     height: 60px;
     width: 100%;
@@ -16,7 +21,8 @@ body{
     align-items: center;
     background: rgb(255, 255, 255);
 }
-.logo{
+
+.logo {
     background: url(logo180_inv.png) no-repeat 50% 50%;
     background-size: contain;
     width: 180px;
@@ -24,81 +30,86 @@ body{
     float: left;
     margin-left: 8px;
 }
-.menu{
+
+.menu {
     position: absolute;
-    right:5%;
+    right: 5%;
     font-style: bold;
     font-size: 120%;
 }
 
 
-.menu a{
+.menu a {
     color: #333;
     text-decoration: none;
     font-weight: 800;
     margin-left: 20px;
-    transition: color .02s; 
+    transition: color .02s;
     text-transform: uppercase;
     color: #575856;
     align-content: center;
 
 }
-.menu a:hover{
+
+.menu a:hover {
     color: #6ab04c;
 }
-.btn{
+
+.btn {
     display: block;
     position: absolute;
     right: 10%;
 }
-.btn span{
+
+.btn span {
     display: none;
-     margin: 6px;
-     width: 40px;
-     height: 3px;
-     background-color:#333;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background-color: #333;
 }
 
-.page-content{
+.page-content {
     position: fixed;
-    top: 60px ;
-    height: calc(100% - 80px);  
+    top: 60px;
+    height: calc(100% - 80px);
     width: 100%;
     background-color: #333;
     background-size: cover;
     overflow: scroll;
- }
+}
 
-.card{
+.card {
     position: relative;
     width: 500px;
-    height: 700px; 
+    height: 700px;
     left: calc(50% - 250px);
-    top: calc(50% - 350px );
-    background-color:rgb(0, 0, 0);
+    top: calc(50% - 350px);
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
 
 }
 
-.img{
+.img {
     width: 500px;
-    height: 500px; 
+    height: 500px;
     border-radius: 5px;
     background: url(profile_picture.jpg) no-repeat 50% 50%;
     background-size: contain;
 }
 
-.card-text{ 
+.card-text {
     width: 500px;
     height: 200px;
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
 }
-.name{
+
+.name {
 
     color: #6ab04c;
-    padding-top: 10%;
+    padding-top: 5%;
     text-transform: uppercase;
     font-size: 125%;
     font-style: bold;
@@ -106,68 +117,86 @@ body{
     margin: 0%;
 }
 
-.title{
-    padding-top: 10%;
-    text-transform: uppercase;
+.title {
+    padding-top: 5%;
+    text-transform: capitalize;
     font-style: bold;
     font-size: 100%;
     margin: 0%;
 }
-.space{
+
+.section-name {
+    color: #6ab04c;
+    padding-top: 10%;
+    text-transform: uppercase;
+    font-size: 300%;
+    font-style: bold;
+    font-weight: 800;
+    margin: 0%;
+    text-align: center;
+
+}
+
+.space {
     display: block;
     width: 100px;
 }
-.expt-card{
-    
+
+.expt-card {
+
     width: 300px;
     height: 250px;
-    background-color:rgb(0, 0, 0);
-    border-style:solid;
+    background-color: rgb(0, 0, 0);
+    border-style: solid;
     border-color: #333;
     border-radius: 5px;
     border-width: 0px;
-    margin:12px;
+    margin: 12px;
     display: inline-table;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.596);
 
 }
 
-.card-icons{
+.card-icons {
     font-size: 300%;
 }
 
-#contact-desc a{
+#contact-desc a {
     text-decoration: none;
     color: gainsboro;
     font-size: 700%;
 }
 
-.card-container{
+.card-container {
     position: relative;
     display: inline-table;
     overflow: scroll;
     top: 5%;
-    width:980px;
-    left: calc(50% - 490px) ;
+    width: 980px;
+    left: calc(50% - 490px);
     white-space: 0px;
 }
-.text{
+
+.text {
     font-size: 0px;
 }
-#work-container{
-    width:660px;
-    left: calc(50% - 330px) ;
-}
-#acad-container{
-    width:660px;
-    left: calc(50% - 330px) ;
-}
-#contact-container{
-    width:330px;
-    left: calc(50% - 165px) ;
+
+#work-container {
+    width: 660px;
+    left: calc(50% - 330px);
 }
 
-.expt-title{
+#acad-container {
+    width: 660px;
+    left: calc(50% - 330px);
+}
+
+#contact-container {
+    width: 330px;
+    left: calc(50% - 165px);
+}
+
+.expt-title {
     text-transform: uppercase;
     font-size: 100%;
     font-style: bold;
@@ -180,185 +209,209 @@ body{
     padding-right: 2%;
 }
 
-.expt-desc{
+.expt-desc {
     font-style: bold;
     font-size: 80%;
-    color:#ffffff;
+    color: #ffffff;
     padding: 2%;
     text-align: center;
 }
 
-.footer{
+.footer {
     z-index: 2;
     font-size: 75%;
     position: fixed;
-    bottom: 7px; 
-    right: 2%;   
+    bottom: 7px;
+    right: 2%;
     height: 10px;
     text-align: center;
 }
 
 
 
-.btn a:hover > span {
+.btn a:hover>span {
     background: #ffffff;
 }
 
 
 
-@media only screen and (max-width:1000px){
-    .card-container{
-        width:660px;
-        left: calc(50% - 330px) ;
-    
+@media only screen and (max-width:1000px) {
+    .card-container {
+        width: 660px;
+        left: calc(50% - 330px);
+
     }
 }
 
 
 
-@media only screen and (max-width:700px){
-    .navbar{
+@media only screen and (max-width:700px) {
+    .navbar {
         overflow: visible;
         background: rgb(255, 255, 255);
     }
-    .menu{
-        width:100%;
-        right:0px;
-        top:60px;
+
+    .menu {
+        width: 100%;
+        right: 0px;
+        top: 60px;
         background: rgb(255, 255, 255);
         overflow: hidden;
         max-height: 0;
     }
-    .menu a{
+
+    .menu a {
         display: block;
         text-align: center;
         margin-top: 0px;
         padding: 20px;
-   }
-    .btn span{
+    }
+
+    .btn span {
         display: block;
         background-color: #333
     }
-    .btn{
+
+    .btn {
         display: block;
         text-align: center;
         margin: 0;
         padding: 10px;
-        cursor:pointer;
+        cursor: pointer;
     }
-    .show{
+
+    .show {
         transition: all .3s;
         max-height: 500px;
-     }
-     .card{
-         position: relative;
+    }
+
+    .card {
+        position: relative;
         left: calc(50% - 125px);
-        top: calc(50% - 175px );
+        top: calc(50% - 175px);
         width: 250px;
-        height: 350px; 
+        height: 350px;
     }
-    .img{
+
+    .img {
         width: 250px;
-        height: 250px; 
+        height: 250px;
     }
-    .card-text{
+
+    .card-text {
 
         width: 250px;
-        height: 100px; 
+        height: 100px;
     }
-    .name{
+
+    .name {
         font-size: 75%;
         font-weight: 500;
     }
-    .title{
+
+    .title {
         font-size: 50%;
     }
-    .card-container{
-        width:330px;
-        left: calc(50% - 165px) ;
+
+    .card-container {
+        width: 330px;
+        left: calc(50% - 165px);
     }
-    #acad-container{
-        width:330px;
-        left: calc(50% - 165px) ;
+
+    #acad-container {
+        width: 330px;
+        left: calc(50% - 165px);
     }
-    #work-container{
-        width:330px;
-        left: calc(50% - 165px) ;
+
+    #work-container {
+        width: 330px;
+        left: calc(50% - 165px);
     }
-    @media only screen and (max-height:500px){
-        .menu{
-            width:100%;
-            top:30px;   
+
+    @media only screen and (max-height:500px) {
+        .menu {
+            width: 100%;
+            top: 30px;
         }
-        .card{
-            top: calc(50% - 175px );
+
+        .card {
+            top: calc(50% - 175px);
         }
     }
 }
 
-   @media only screen and (max-height:500px){
-    .navbar{
+@media only screen and (max-height:500px) {
+    .navbar {
         height: 30px;
     }
-    .logo{
+
+    .logo {
         width: 90px;
         height: 30px;
         margin-left: 8px;
     }
-    .menu{
+
+    .menu {
         font-style: bold;
         font-size: 80%;
     }
-    .page-content{
-        top: 30px ;
-        height: calc(100% - 50px); 
+
+    .page-content {
+        top: 30px;
+        height: calc(100% - 50px);
     }
-    .footer{
+
+    .footer {
         font-size: 70%;
-        bottom: 1px; 
+        bottom: 1px;
         height: 15px;
     }
-    .btn span{
-         margin: 3px;
-         width: 20px;
-         height: 2px;
+
+    .btn span {
+        margin: 3px;
+        width: 20px;
+        height: 2px;
 
     }
-    
+
 }
 
-   @media only screen and (max-height:800px) and (min-width:700px){
-    .card{
+@media only screen and (max-height:800px) and (min-width:700px) {
+    .card {
         position: relative;
         width: 600px;
-        height: 300px; 
+        height: 300px;
         left: calc(50% - 300px);
-        top: calc(50% - 150px  );
+        top: calc(50% - 150px);
     }
-    .card-text{
+
+    .card-text {
         width: 300px;
-        height: 300px; 
+        height: 300px;
         margin-left: calc(50%);
         margin-top: -50%;
     }
-    .img{
+
+    .img {
 
         width: 300px;
-        height: 300px; 
+        height: 300px;
     }
-    .name{
+
+    .name {
         padding-top: 20%;
         font-size: 100%;
         font-weight: 300;
     }
-    
-    .title{
+
+    .title {
         padding-top: 20%;
-        font-size: 75%;
+        font-size: 50%;
     }
-    @media only screen and (max-height:500px){
-        .card{
-            top: calc(50% - 150px );
+
+    @media only screen and (max-height:500px) {
+        .card {
+            top: calc(50% - 150px);
         }
     }
 
