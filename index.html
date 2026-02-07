@@ -191,6 +191,14 @@
             letter-spacing: -0.02em;
         }
 
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: -36px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
         /* ========================================
            Hero
            ======================================== */
@@ -665,6 +673,19 @@
             background: var(--bg-primary);
         }
 
+        .certs-subheading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .certs-subheading:not(:first-of-type) {
+            margin-top: 32px;
+        }
+
         .certs-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -703,7 +724,6 @@
         .cert-icon.safe    { background: #e8f5e9; color: #388e3c; }
         .cert-icon.oracle  { background: #fce4ec; color: #c62828; }
         .cert-icon.sap     { background: #e3f2fd; color: #1565c0; }
-        .cert-icon.ieee    { background: #f3e5f5; color: #7b1fa2; }
 
         .cert-info h4 {
             font-size: 0.88rem;
@@ -1051,12 +1071,12 @@
         <div class="hero-text">
             <span class="hero-greeting">Hello, I'm</span>
             <h1 class="hero-name">Anish Thanaseelan<br>Kaspaar</h1>
-            <p class="hero-role">Senior Solution Architect | Retail &amp; Supply Chain | TOGAF &amp; Cloud Architecture</p>
+            <p class="hero-role">Enterprise Solution Architect | Supply Chain &amp; Logistics | TOGAF &amp; Azure Certified</p>
             <p class="hero-summary">
-                Supply Chain and Logistics SME and Consultant with 18+ years of experience in software development.
-                TOGAF and Azure Certified Solution Architect with expertise in creating and implementing architecture for
-                end-to-end B2B application solutions. Scaled Agile Agilist certified professional with experience in
-                multi-year, multi-vendor, and multi-shore software development engagements.
+                Enterprise Solution Architect and Supply Chain SME with 19+ years of experience in software development,
+                specializing in delivering win-win solutions and complex legacy decoupling. Bridges the gap between
+                commercial strategy and technical execution, ensuring enterprise-level migrations are technically viable
+                and operationally secure. TOGAF and Azure Certified with expertise in end-to-end B2B application architecture.
             </p>
             <div class="hero-cta">
                 <a href="https://www.linkedin.com/in/anish-kaspaar/" class="btn btn-primary" target="_blank" rel="noopener">
@@ -1071,11 +1091,11 @@
             </div>
             <div class="hero-stats">
                 <div>
-                    <div class="hero-stat-num">18+</div>
+                    <div class="hero-stat-num">19+</div>
                     <div class="hero-stat-label">Years Experience</div>
                 </div>
                 <div>
-                    <div class="hero-stat-num">10+</div>
+                    <div class="hero-stat-num">9</div>
                     <div class="hero-stat-label">Certifications</div>
                 </div>
                 <div>
@@ -1118,7 +1138,7 @@
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-warehouse"></i></div>
                 <h3>Warehouse Management Systems</h3>
-                <p>12+ years as a WMS SME. Designed solutions for Hubs, Spokes, Food, General Merchandise, Apparel, e-Commerce, and Home Shopping operations across 5+ unique markets and continents.</p>
+                <p>18+ years as a WMS SME. Designed solutions for Hubs, Spokes, Food, General Merchandise, Apparel, e-Commerce, and Home Shopping operations across 5+ unique markets and continents.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">GLS</span>
                     <span class="tech-tag">WCS</span>
@@ -1130,7 +1150,7 @@
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-code"></i></div>
                 <h3>Application Development</h3>
-                <p>13+ years of full-stack development across Retail and Healthcare domains. Expertise in architecture and design of scalable web and backend applications in multiple tech stacks.</p>
+                <p>19+ years of full-stack development across Retail and Healthcare domains. Expertise in architecture and design of scalable web and backend applications in multiple tech stacks.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Java</span>
                     <span class="tech-tag">JavaScript</span>
@@ -1157,13 +1177,13 @@
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-users"></i></div>
                 <h3>Stakeholder Management</h3>
-                <p>9+ years of client-facing experience across multiple continents. Practitioner of Creative Problem Solving (CPS) to engage stakeholders and create win-win solutions with transparent cost-benefit analysis.</p>
+                <p>15+ years of client-facing experience across multiple continents. Practitioner of Creative Problem Solving (CPS) to engage stakeholders and create win-win solutions with transparent cost-benefit analysis.</p>
             </div>
 
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-sync-alt"></i></div>
                 <h3>Agile &amp; SAFe</h3>
-                <p>Certified SAFe Agilist with 9+ years in agile roles. Helped organisations transition into Agile development and scaled agile frameworks for large-scale delivery.</p>
+                <p>Certified SAFe Agilist with 15+ years in agile roles. Helped organisations transition into Agile development and scaled agile frameworks for large-scale delivery.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">SAFe</span>
                     <span class="tech-tag">Scrum</span>
@@ -1193,15 +1213,17 @@
                 </div>
                 <div class="timeline-company">Cognizant Technology Solutions · Greater Leeds Area, UK</div>
                 <div class="timeline-desc">
-                    Senior Solution Architect across Cognizant's global business units (UK, USA, and India),
-                    delivering large-scale enterprise solutions in retail and supply chain for Walmart and ASDA.
+                    Enterprise Solution Architect across Cognizant's global business units (UK, USA, and India),
+                    bridging commercial strategy and technical execution to deliver large-scale enterprise solutions
+                    in retail and supply chain for Walmart and ASDA.
                 </div>
                 <div class="timeline-highlights">
                     <div class="timeline-highlight">
-                        <strong>ASDA Divestiture</strong> — Enterprise Architect and Senior Tech Lead.
-                        Led a 300-person technology team for a large-scale enterprise-level migration.
-                        Responsible for overall technology governance, IP protection, transition states,
-                        and system/data migration strategy.
+                        <strong>ASDA Divestiture</strong> — Led the sell-side architectural separation for the
+                        &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in history.
+                        Orchestrated the surgical removal of a &pound;20bn revenue entity from a deeply integrated global
+                        ecosystem. Led a 300-person technology team, responsible for technology governance, IP protection,
+                        Technology Vision &amp; Policies, and system/data migration strategy for transition states.
                     </div>
                     <div class="timeline-highlight">
                         <strong>ASDA-George Clothing</strong> — WMS SME and Solutions Architect.
@@ -1278,8 +1300,9 @@
      ============================ -->
 <section class="projects" id="projects">
     <div class="section-inner">
-        <div class="section-label">Portfolio</div>
-        <h2 class="section-title">Works</h2>
+        <div class="section-label">Open Source</div>
+        <h2 class="section-title">Passion Projects</h2>
+        <p class="section-subtitle">Personal open-source projects — built to explore ideas, sharpen skills, and contribute to the community.</p>
         <div class="projects-grid">
 
             <div class="project-card reveal">
@@ -1297,17 +1320,17 @@
             </div>
 
             <div class="project-card reveal">
-                <h3>Things To Do — Android App</h3>
-                <p>A platform-agnostic standalone task management app designed with cross-platform principles in mind using Cordova.</p>
-                <div class="project-tech">JavaScript · CSS · Cordova · HTML</div>
-                <a href="https://play.google.com/store/apps/details?id=com.theworldisaw.thingstodo&hl=en_GB" class="project-link" target="_blank" rel="noopener">View on Play Store <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card reveal">
                 <h3>Coding Challenges</h3>
                 <p>Solutions to challenges from Advent of Code and Coderbyte, implemented across multiple languages.</p>
                 <div class="project-tech">Java · JavaScript · Perl</div>
                 <a href="https://github.com/anishthanaseelan/coding_challenges" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Portfolio Website</h3>
+                <p>This responsive single-page portfolio — designed and built from scratch with dark mode support, scroll-reveal animations, and mobile-first layout. Developed with AI coding assistance (Claude) to demonstrate modern human–AI collaborative development.</p>
+                <div class="project-tech">HTML · CSS · JavaScript · Claude AI</div>
+                <a href="https://github.com/anishthanaseelan/anishthanaseelan.github.io" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
 
         </div>
@@ -1321,6 +1344,7 @@
     <div class="section-inner">
         <div class="section-label">Credentials</div>
         <h2 class="section-title">Licenses &amp; Certifications</h2>
+        <h3 class="certs-subheading">Technology</h3>
         <div class="certs-grid">
 
             <div class="cert-card reveal">
@@ -1364,15 +1388,20 @@
             </div>
 
             <div class="cert-card reveal">
-                <div class="cert-icon oracle"><i class="fas fa-cloud"></i></div>
+                <div class="cert-icon oracle"><i class="fas fa-brain"></i></div>
                 <div class="cert-info">
                     <h4>OCI 2024 Generative AI Professional</h4>
                     <p>Oracle · Issued Jul 2024 · Expires Jul 2026</p>
                 </div>
             </div>
 
+        </div>
+
+        <h3 class="certs-subheading">Business</h3>
+        <div class="certs-grid">
+
             <div class="cert-card reveal">
-                <div class="cert-icon togaf"><i class="fas fa-layer-group"></i></div>
+                <div class="cert-icon togaf"><i class="fas fa-sitemap"></i></div>
                 <div class="cert-info">
                     <h4>TOGAF&reg; 9 Certified</h4>
                     <p>The Open Group · Issued Apr 2014</p>
@@ -1380,7 +1409,7 @@
             </div>
 
             <div class="cert-card reveal">
-                <div class="cert-icon safe"><i class="fas fa-check-circle"></i></div>
+                <div class="cert-icon safe"><i class="fas fa-infinity"></i></div>
                 <div class="cert-info">
                     <h4>SAFe&reg; Agilist</h4>
                     <p>Scaled Agile, Inc. · Issued Dec 2015</p>
@@ -1388,18 +1417,10 @@
             </div>
 
             <div class="cert-card reveal">
-                <div class="cert-icon sap"><i class="fas fa-boxes-stacked"></i></div>
+                <div class="cert-icon sap"><i class="fas fa-truck-fast"></i></div>
                 <div class="cert-info">
                     <h4>SAP S/4HANA — Logistics</h4>
                     <p>SAP · Issued Jun 2022</p>
-                </div>
-            </div>
-
-            <div class="cert-card reveal">
-                <div class="cert-icon ieee"><i class="fas fa-microchip"></i></div>
-                <div class="cert-info">
-                    <h4>IEEE Computer Society Member</h4>
-                    <p>IEEE Computer Society · Issued Mar 2024</p>
                 </div>
             </div>
 
