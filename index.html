@@ -1,282 +1,1530 @@
 ﻿<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139632377-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-139632377-1');
-    </script>
-
     <meta charset="utf-8">
-    <title> Anish Thanaseelan Kaspaar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width , initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-</head>
+    <title>Anish Thanaseelan Kaspaar — Senior Solution Architect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senior Solution Architect with 18+ years in Retail, Supply Chain & Logistics. TOGAF & Azure Certified.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ========================================
+           CSS Variables & Reset
+           ======================================== */
+        :root {
+            --bg-primary: #f5f5f5;
+            --bg-secondary: #ffffff;
+            --bg-dark: #1a1a1a;
+            --text-primary: #1a1a1a;
+            --text-secondary: #555555;
+            --text-muted: #888888;
+            --accent: #6ab04c;
+            --border: #e0e0e0;
+            --border-light: #eeeeee;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+            --radius: 8px;
+            --section-gap: 100px;
+            --content-width: 1080px;
+        }
 
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========================================
+           Navigation
+           ======================================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-inner {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.25s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ========================================
+           Shared Section Styles
+           ======================================== */
+        section {
+            padding: var(--section-gap) 32px;
+        }
+
+        .section-inner {
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+
+        /* ========================================
+           Hero
+           ======================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--bg-primary);
+            padding-top: 64px;
+        }
+
+        .hero-inner {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-greeting {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .hero-name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-role {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-summary {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: all 0.25s;
+            cursor: pointer;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--bg-dark);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #333333;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .hero-photo-wrapper {
+            position: relative;
+            width: 380px;
+            height: 440px;
+        }
+
+        .hero-photo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            filter: grayscale(20%);
+            transition: filter 0.5s;
+        }
+
+        .hero-photo-wrapper:hover .hero-photo-img {
+            filter: grayscale(0%);
+        }
+
+        .hero-photo-accent {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ========================================
+           Expertise
+           ======================================== */
+        .expertise {
+            background: var(--bg-secondary);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .expertise-card {
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--bg-primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .expertise-card:hover {
+            border-color: var(--border);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .expertise-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .expertise-icon {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .expertise-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .expertise-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+
+        .tech-tag {
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* ========================================
+           Experience Timeline
+           ======================================== */
+        .experience {
+            background: var(--bg-primary);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 48px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -37px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg-primary);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-role {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .timeline-period {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .timeline-company {
+            font-size: 0.92rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .timeline-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .timeline-highlights {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .timeline-highlight {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .timeline-highlight::before {
+            content: '\2014';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ========================================
+           Achievements
+           ======================================== */
+        .achievements {
+            background: var(--bg-secondary);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .achievement-card {
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--bg-primary);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .achievement-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .achievement-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .achievement-metric {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        /* ========================================
+           Notable Projects (Dark Section)
+           ======================================== */
+        .projects {
+            background: var(--bg-dark);
+            color: #ffffff;
+        }
+
+        .projects .section-label {
+            color: var(--accent);
+        }
+
+        .projects .section-title {
+            color: #ffffff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            padding: 32px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        .project-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .project-card p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 12px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            font-size: 0.82rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.2s;
+        }
+
+        .project-link:hover {
+            gap: 10px;
+        }
+
+        /* ========================================
+           Certifications
+           ======================================== */
+        .certifications {
+            background: var(--bg-primary);
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .cert-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cert-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .cert-icon.azure   { background: #e8f4fd; color: #0078d4; }
+        .cert-icon.togaf   { background: #fef3e2; color: #d4760c; }
+        .cert-icon.safe    { background: #e8f5e9; color: #388e3c; }
+        .cert-icon.oracle  { background: #fce4ec; color: #c62828; }
+        .cert-icon.sap     { background: #e3f2fd; color: #1565c0; }
+        .cert-icon.ieee    { background: #f3e5f5; color: #7b1fa2; }
+
+        .cert-info h4 {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .cert-info p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* ========================================
+           Education
+           ======================================== */
+        .education {
+            background: var(--bg-secondary);
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .edu-card {
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--bg-primary);
+        }
+
+        .edu-degree {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .edu-field {
+            font-size: 0.88rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .edu-school {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* ========================================
+           Publications
+           ======================================== */
+        .publications {
+            background: var(--bg-primary);
+        }
+
+        .publication-card {
+            display: flex;
+            gap: 32px;
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .publication-card:hover {
+            border-color: var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pub-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--text-muted);
+        }
+
+        .pub-info h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .pub-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            font-size: 0.82rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: gap 0.2s;
+        }
+
+        .pub-link:hover {
+            gap: 10px;
+        }
+
+        /* ========================================
+           Contact (Dark Section)
+           ======================================== */
+        .contact {
+            background: var(--bg-dark);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: var(--accent);
+        }
+
+        .contact .section-title {
+            color: #ffffff;
+        }
+
+        .contact-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 520px;
+            margin: -32px auto 40px;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.3);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* ========================================
+           Footer
+           ======================================== */
+        .footer {
+            background: var(--bg-dark);
+            color: rgba(255,255,255,0.4);
+            text-align: center;
+            padding: 24px 32px;
+            font-size: 0.78rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        /* ========================================
+           Animations
+           ======================================== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========================================
+           Responsive — Tablet
+           ======================================== */
+        @media (max-width: 900px) {
+            :root {
+                --section-gap: 72px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-summary {
+                max-width: 100%;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-photo {
+                order: -1;
+            }
+
+            .hero-photo-wrapper {
+                width: 280px;
+                height: 320px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid,
+            .certs-grid,
+            .edu-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(16px);
+                flex-direction: column;
+                padding: 24px 32px;
+                gap: 0;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 14px 0;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .publication-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ========================================
+           Responsive — Mobile
+           ======================================== */
+        @media (max-width: 600px) {
+            section {
+                padding: 56px 20px;
+            }
+
+            .nav-inner {
+                padding: 0 20px;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .hero-photo-wrapper {
+                width: 220px;
+                height: 260px;
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="navbar">
-        <div class="logo" id="logo"></div>
-        <div class="btn">
-            <a>
-                <span></span>
-                <span></span>
-                <span></span>
+
+<!-- ============================
+     NAVIGATION
+     ============================ -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo">A<span>.</span>K</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+            <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
+            <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+            <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Works</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ============================
+     HERO / ABOUT ME
+     ============================ -->
+<section class="hero" id="hero">
+    <div class="hero-inner section-inner">
+        <div class="hero-text">
+            <span class="hero-greeting">Hello, I'm</span>
+            <h1 class="hero-name">Anish Thanaseelan<br>Kaspaar</h1>
+            <p class="hero-role">Senior Solution Architect | Retail &amp; Supply Chain | TOGAF &amp; Cloud Architecture</p>
+            <p class="hero-summary">
+                Supply Chain and Logistics SME and Consultant with 18+ years of experience in software development.
+                TOGAF and Azure Certified Solution Architect with expertise in creating and implementing architecture for
+                end-to-end B2B application solutions. Scaled Agile Agilist certified professional with experience in
+                multi-year, multi-vendor, and multi-shore software development engagements.
+            </p>
+            <div class="hero-cta">
+                <a href="https://www.linkedin.com/in/anish-kaspaar/" class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/anishthanaseelan" class="btn btn-outline" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://medium.com/@anishthanaseelan" class="btn btn-outline" target="_blank" rel="noopener">
+                    <i class="fab fa-medium"></i> Medium
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="hero-stat-num">18+</div>
+                    <div class="hero-stat-label">Years Experience</div>
+                </div>
+                <div>
+                    <div class="hero-stat-num">10+</div>
+                    <div class="hero-stat-label">Certifications</div>
+                </div>
+                <div>
+                    <div class="hero-stat-num">5+</div>
+                    <div class="hero-stat-label">Markets Served</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-photo">
+            <div class="hero-photo-wrapper">
+                <img src="profile_picture.jpg" alt="Anish Thanaseelan Kaspaar" class="hero-photo-img"
+                     onerror="this.style.background='linear-gradient(135deg,#e0e0e0,#bdbdbd)';this.alt='Photo'">
+                <div class="hero-photo-accent"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     EXPERTISE
+     ============================ -->
+<section class="expertise" id="expertise">
+    <div class="section-inner">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="expertise-grid">
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3>Solution Architecture</h3>
+                <p>TOGAF ADM practitioner experienced in architectural assessments, governance, and comprehensive documentation across application development, data, security, and infrastructure pillars.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">TOGAF</span>
+                    <span class="tech-tag">SOA</span>
+                    <span class="tech-tag">Microservices</span>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-warehouse"></i></div>
+                <h3>Warehouse Management Systems</h3>
+                <p>12+ years as a WMS SME. Designed solutions for Hubs, Spokes, Food, General Merchandise, Apparel, e-Commerce, and Home Shopping operations across 5+ unique markets and continents.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">GLS</span>
+                    <span class="tech-tag">WCS</span>
+                    <span class="tech-tag">Dematic</span>
+                    <span class="tech-tag">Toyota T-One</span>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-code"></i></div>
+                <h3>Application Development</h3>
+                <p>13+ years of full-stack development across Retail and Healthcare domains. Expertise in architecture and design of scalable web and backend applications in multiple tech stacks.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Flutter</span>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Enterprise Integration</h3>
+                <p>Designed and developed interfaces for Swisslog, OMS, ERP, Dock Schedulers, FMS, SCHÄFER, Paragon, Vanderlande Vision, and Toyota T-One warehouse automation systems.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">ActiveMQ</span>
+                    <span class="tech-tag">IBM MQ</span>
+                    <span class="tech-tag">Kafka</span>
+                    <span class="tech-tag">Azure Service Bus</span>
+                    <span class="tech-tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-users"></i></div>
+                <h3>Stakeholder Management</h3>
+                <p>9+ years of client-facing experience across multiple continents. Practitioner of Creative Problem Solving (CPS) to engage stakeholders and create win-win solutions with transparent cost-benefit analysis.</p>
+            </div>
+
+            <div class="expertise-card reveal">
+                <div class="expertise-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Agile &amp; SAFe</h3>
+                <p>Certified SAFe Agilist with 9+ years in agile roles. Helped organisations transition into Agile development and scaled agile frameworks for large-scale delivery.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">SAFe</span>
+                    <span class="tech-tag">Scrum</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">TDD</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     WORK EXPERIENCE
+     ============================ -->
+<section class="experience" id="experience">
+    <div class="section-inner">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <span class="timeline-role">Architect — Technology</span>
+                    <span class="timeline-period">May 2008 — Present · 18+ yrs</span>
+                </div>
+                <div class="timeline-company">Cognizant Technology Solutions · Greater Leeds Area, UK</div>
+                <div class="timeline-desc">
+                    Senior Solution Architect across Cognizant's global business units (UK, USA, and India),
+                    delivering large-scale enterprise solutions in retail and supply chain for Walmart and ASDA.
+                </div>
+                <div class="timeline-highlights">
+                    <div class="timeline-highlight">
+                        <strong>ASDA Divestiture</strong> — Enterprise Architect and Senior Tech Lead.
+                        Led a 300-person technology team for a large-scale enterprise-level migration.
+                        Responsible for overall technology governance, IP protection, transition states,
+                        and system/data migration strategy.
+                    </div>
+                    <div class="timeline-highlight">
+                        <strong>ASDA-George Clothing</strong> — WMS SME and Solutions Architect.
+                        Designed and developed the WMS integration solution for the WCS (Dematic) warehouse automation system.
+                    </div>
+                    <div class="timeline-highlight">
+                        <strong>US e-Commerce Distribution Centre</strong> — Application Architect for GLS
+                        Order Processing, Wave Planning, Cartonisation, and Last-mile Carrier Integration (UPS, FedEx, USPS).
+                    </div>
+                    <div class="timeline-highlight">
+                        <strong>GLS NextGen</strong> — WMS SME and Integration Specialist.
+                        Led monolith-to-microservices migration; mentored the team in adopting TDD while
+                        maintaining delivery to market.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-header">
+                    <span class="timeline-role">Programmer Analyst</span>
+                    <span class="timeline-period">Jul 2006 — Apr 2008 · 1 yr 10 mos</span>
+                </div>
+                <div class="timeline-company">Source HOV Pvt. Ltd · Chennai, India</div>
+                <div class="timeline-desc">
+                    Software development and database management, building foundational expertise in RDBMS
+                    and application development.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     NOTABLE ACHIEVEMENTS
+     ============================ -->
+<section class="achievements" id="achievements">
+    <div class="section-inner">
+        <div class="section-label">Impact</div>
+        <h2 class="section-title">Notable Achievements</h2>
+        <div class="achievements-grid">
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">600%</div>
+                <h3>Releasewave Re-engineering</h3>
+                <p>Reduced line count by 75%, regression effort by 60%, and runtime by 600%. Enabled processing of a million cases in 20 minutes, unlocking GLS for US Import DCs.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">35%</div>
+                <h3>Performance Tracking &amp; Anomaly Detection</h3>
+                <p>Identified numerous Releasewave performance issues through innovative data analytics, reducing runtime by 35% and helping Walmart keep the promise of 1-Hour delivery.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">100%</div>
+                <h3>Defect Removal Efficiency</h3>
+                <p>As part of the NextGen integration project, delivered simplified, production-quality deliverables consistently with zero reopens and 100% defect removal efficiency.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">CPS</div>
+                <h3>Win-Win Stakeholder Solutions</h3>
+                <p>Used the Osborn Creative Problem Solving technique for the GDS elimination initiative, creating a solution that satisfied all stakeholders and ensured smooth migration to GLS.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     WORKS / PROJECTS
+     ============================ -->
+<section class="projects" id="projects">
+    <div class="section-inner">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Works</h2>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <h3>Carrier Integration Platform (CIP)</h3>
+                <p>Cloud-ready B2B integration platform built on SOA, automating transactions with carriers like UPS, FedEx, and USPS. Single-handedly designed and delivered with a lean team.</p>
+                <div class="project-tech">Java · JavaScript · CSS · HTML · XSLT</div>
+                <a href="https://github.com/anishthanaseelan/cip" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Automated Quality Compliance (AQCV)</h3>
+                <p>Platform-agnostic static code quality analysis and reporting tool for ESQL/C languages, designed for easy plug-and-play of compliance rules, monitoring and enforcement.</p>
+                <div class="project-tech">Perl · Tk/Perl · HTML</div>
+                <a href="https://github.com/anishthanaseelan/AQCV" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Things To Do — Android App</h3>
+                <p>A platform-agnostic standalone task management app designed with cross-platform principles in mind using Cordova.</p>
+                <div class="project-tech">JavaScript · CSS · Cordova · HTML</div>
+                <a href="https://play.google.com/store/apps/details?id=com.theworldisaw.thingstodo&hl=en_GB" class="project-link" target="_blank" rel="noopener">View on Play Store <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card reveal">
+                <h3>Coding Challenges</h3>
+                <p>Solutions to challenges from Advent of Code and Coderbyte, implemented across multiple languages.</p>
+                <div class="project-tech">Java · JavaScript · Perl</div>
+                <a href="https://github.com/anishthanaseelan/coding_challenges" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     CERTIFICATIONS
+     ============================ -->
+<section class="certifications" id="certifications">
+    <div class="section-inner">
+        <div class="section-label">Credentials</div>
+        <h2 class="section-title">Licenses &amp; Certifications</h2>
+        <div class="certs-grid">
+
+            <div class="cert-card reveal">
+                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
+                <div class="cert-info">
+                    <h4>Azure Solutions Architect Expert</h4>
+                    <p>Microsoft · Issued Nov 2024 · Expires Nov 2026</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
+                <div class="cert-info">
+                    <h4>Azure Administrator Associate</h4>
+                    <p>Microsoft · Issued Sep 2024</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
+                <div class="cert-info">
+                    <h4>Azure Developer Associate</h4>
+                    <p>Microsoft · Issued May 2022</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
+                <div class="cert-info">
+                    <h4>Azure AI Fundamentals</h4>
+                    <p>Microsoft · Issued May 2021</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
+                <div class="cert-info">
+                    <h4>Azure Fundamentals</h4>
+                    <p>Microsoft · Issued Oct 2019</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon oracle"><i class="fas fa-cloud"></i></div>
+                <div class="cert-info">
+                    <h4>OCI 2024 Generative AI Professional</h4>
+                    <p>Oracle · Issued Jul 2024 · Expires Jul 2026</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon togaf"><i class="fas fa-layer-group"></i></div>
+                <div class="cert-info">
+                    <h4>TOGAF&reg; 9 Certified</h4>
+                    <p>The Open Group · Issued Apr 2014</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon safe"><i class="fas fa-check-circle"></i></div>
+                <div class="cert-info">
+                    <h4>SAFe&reg; Agilist</h4>
+                    <p>Scaled Agile, Inc. · Issued Dec 2015</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon sap"><i class="fas fa-boxes-stacked"></i></div>
+                <div class="cert-info">
+                    <h4>SAP S/4HANA — Logistics</h4>
+                    <p>SAP · Issued Jun 2022</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon ieee"><i class="fas fa-microchip"></i></div>
+                <div class="cert-info">
+                    <h4>IEEE Computer Society Member</h4>
+                    <p>IEEE Computer Society · Issued Mar 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     EDUCATION
+     ============================ -->
+<section class="education" id="education">
+    <div class="section-inner">
+        <div class="section-label">Academics</div>
+        <h2 class="section-title">Education</h2>
+        <div class="edu-grid">
+
+            <div class="edu-card reveal">
+                <div class="edu-degree">Master of Science (MS)</div>
+                <div class="edu-field">Software Engineering</div>
+                <div class="edu-school">Birla Institute of Technology, Pilani</div>
+            </div>
+
+            <div class="edu-card reveal">
+                <div class="edu-degree">Bachelor of Engineering (BE)</div>
+                <div class="edu-field">Electronics and Communication</div>
+                <div class="edu-school">Anna University, Chennai</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     PUBLICATIONS
+     ============================ -->
+<section class="publications" id="publications">
+    <div class="section-inner">
+        <div class="section-label">Writing</div>
+        <h2 class="section-title">Publications</h2>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fab fa-medium"></i></div>
+            <div class="pub-info">
+                <h3>Creating Winning Solutions: Bringing Stakeholders Together with CPS</h3>
+                <p>An approach to pre-development discovery using the Osborn Creative Problem Solving technique.
+                   Covers stakeholder engagement, AS-IS discovery, ideation, cost-benefit convolution,
+                   and functional flow identification to maximise ROI confidence and create win-win outcomes.</p>
+                <a href="https://medium.com/@anishthanaseelan/an-approach-to-pre-development-discovery-using-cps-9a9c9c54de29" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     CONTACT
+     ============================ -->
+<section class="contact" id="contact">
+    <div class="section-inner">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-desc">
+            Whether you need help building large-scale software solutions, are looking for expertise in
+            retail and supply chain, or simply want to connect — I'd love to hear from you.
+        </p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/anish-kaspaar/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/anishthanaseelan" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://medium.com/@anishthanaseelan" class="social-link" target="_blank" rel="noopener" aria-label="Medium">
+                <i class="fab fa-medium-m"></i>
             </a>
         </div>
-        <div class="menu">
-            <a class="menu_home" id="menu_home" href="#intro-card">Home</a>
-            <a class="menu_expr" id="menu_expr" href="#expt-cards">Expertise</a>
-            <a class="menu_acad" id="menu_acad" href="#acad-cards">Academics</a>
-            <a class="menu_work" id="menu_work" href="#work-cards">Works</a>
-            <a class="menu_contact" id="menu_contact" href="#contact-cards">Contact</a>
-        </div>
     </div>
-    <section id="intro-card">
-        <div class="section-name">About Me</div>
-        <div class="card">
-            <div class="img"></div>
-            <div class="card-text">
-                <p class="name">Anish Thanaseelan Kaspaar</p>
-                <p class="title"> I am a TOGAF and Azure Certified Senior Solution Architect who has 18 years experiance
-                    in Retail, Supply Chain and Logistics Industry.</p>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <section id="expt-cards">
+<!-- ============================
+     FOOTER
+     ============================ -->
+<footer class="footer">
+    &copy; Anish Kaspaar 2026
+</footer>
 
-        <div class="card-container">
-            <div class="section-name">My Expertise</div>
-            <div class="expt-card">
-                <div class="expt-title">Application development</div>
-                <div class="expt-desc">I have 13 years of application development experience in various tech stacks
-                    across multiple domains Retail and Healthcare. I mainly expertise in architecture and design of Web
-                    and backend applications. I have done development is large number of frameworks and languages.
-                    </br>
-                    <i class="fab fa-java card-icons "></i>
-                    <i class="fab fa-js-square card-icons "></i>
-                    <i class="fab fa-react card-icons"></i>
-                    <i class="fab fa-python card-icons"></i>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Algorithm design</div>
-                <div class="expt-desc">Throughout my development career, I have designed and developed some of the
-                    time-critical, logically complex algorithms for the effective operation of a Warehouses. I have used
-                    many performance measurement methods like the order of execution and other statistical methods, to
-                    tune and improve the performance of the algorithms.
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Multi-Year Multi-Vendor collaboration </div>
-                <div class="expt-desc">I have worked in several multiyear projects which are done in collaboration with
-                    multiple vendors from across different geographies of the world, which also comprises of people from
-                    different culture and ethnicity. I am a strong believer of <i>“Making oneself redundant”</i> and
-                    have ripped the benefit of the same throughout my career. </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Client facing and Stakeholder management</div>
-                <div class="expt-desc"> As a TOGAF® Certified Solution Architect, I have been facing clients and
-                    managing stakeholders for the past 9 years. I have worked with clients from multiple continents and
-                    managed their expectations and done Risk and Escalation management as well.
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Agile Specialist</div>
-                <div class="expt-desc">I am a Scaled Agile certified specialist. I have more than 9 years of work
-                    experience in different agile roles. I have helped business who never used agile development before,
-                    transition into Agile development. </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">SME in Warehouse Management</div>
-                <div class="expt-desc">I have 12 years of experience in warehouse management systems. I have developed
-                    applications for more than 5 unique markets across different continents. I have to customize and
-                    enhancing warehouse management systems for different types of operations as well like, Hubs, Spokes,
-                    Food, General Merchandise, Apparel, e-commerce, Home shopping, etc. I have worked with various
-                    Warehouse automation systems as well. </div>
-            </div>
-        </div>
-    </section>
+<!-- ============================
+     SCRIPTS
+     ============================ -->
+<script>
+    // Nav shadow on scroll
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
 
-    <section id="acad-cards">
-        <div class="section-name">My Educational Qualifications</div>
-        <div class="card-container" id="acad-container">
-            <div class="expt-card">
-                <div class="expt-title">Degrees</div>
-                <div class="expt-desc">
-                    <p>Master of Science (MS) in Software Engineering from Birla Institute of Technology, Pilani</p>
-                    <p>Bachelor of Engineering (BE) in Electronics and Communication from Anna University, Chennai</p>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Certificates</div>
-                <div class="expt-desc">
-                    <p>TOGAF® 9 Certification from The Open Group</p>
-                    <p>Certified SAFe® 4 Agilist (SA) from Scaled Agile, Inc.</p>
-                    <p>Microsoft Certified: Azure Fundamentals</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Mobile menu toggle
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
 
-    <section id="work-cards">
-        <div class="section-name">My Work Experiance</div>
-        <div class="card-container">
-            <div class="expt-card">
-                <div class="expt-title">My Profile Web page</div>
-                <div class="expt-desc">
-                    <p>This profile page is created with simple and minimalistic approach in mind. The page design
-                        reflects beginning of my development carrier, and my love for Linux. </p>
-                    <p>Technologies : HTML, Javascript and CSS </p>
-                    <p>Web Link : <a href="https://anishthanaseelan.github.io">Click Here</a> </p>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">A Simple Android App : Things To Do</div>
-                <div class="expt-desc">
-                    <p>This is a simple To Do app, to organize one's daily tasks. This is a standalone app is designed
-                        keeping platform agnostics in mind </p>
-                    <p>Technologies : Javascript, CSS, Cordova and HTML </p>
-                    <p>App Link : <a
-                            href="https://play.google.com/store/apps/details?id=com.theworldisaw.thingstodo&hl=en_GB">Click
-                            Here</a> </p>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Carrier Integration Platform</div>
-                <div class="expt-desc">
-                    <p>This platform has a group of cloud-ready, B2B applications developed on SOA, to help automate and
-                        manage the transaction to and from carriers like UPS, FedEx, and USPS. </p>
-                    <p>Technologies : Java, Javascript, CSS, HTML and XSLT </p>
-                    <p>GitHub Link : <a href="https://github.com/anishthanaseelan/cip">Click Here</a> </p>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Coding Chalanges</div>
-                <div class="expt-desc">
-                    <p>This is me taking on some casual coding chalanges from adventofcode.com and coderbyte.com </p>
-                    <p>Technologies : Java, Javascript and Perl </p>
-                    <p>GitHub Link : <a href="https://github.com/anishthanaseelan/coding_challenges">Click Here</a> </p>
-                </div>
-            </div>
-            <div class="expt-card">
-                <div class="expt-title">Automated Quality compliance Verification for ESQL/C</div>
-                <div class="expt-desc">
-                    <p>This code quality compliance validator for C like languages. This platform-agnostic application
-                        is designed for easy plug and play of compliance rules, monitoring and enforcing compliance.
-                    </p>
-                    <p>Technologies : Perl, Tk/Perl and HTML </p>
-                    <p>GitHub Link : <a href="https://github.com/anishthanaseelan/AQCV">Click Here</a> </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    navToggle.addEventListener('click', function () {
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
 
-    <section id="contact-cards">
-        <div class="section-name">How to Reach Me</div>
-        <div class="card-container" id="contact-container">
-            <div class="expt-card">
-                <div class="expt-title">Social Media</div>
-                <div class="expt-desc" id="contact-desc">
-                    </br>
-                    <a href="https://github.com/anishthanaseelan" class="fab fa-github-square"></a>
-                    <a href="https://www.linkedin.com/in/anish-kaspaar/" class="fab fa-linkedin"></a>
-                    </br>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="footer" id="footer">
-        © Anish Kaspaar 2025
-    </div>
-</body>
-
-<script type="text/javascript">
-    /*
-        PageToggle("init");
-    
-    
-        $(".btn").on("click", function () {
-            $('.menu').toggleClass("show");
-        })
-    
-        $(".menu_home").on("click", function () {
-            PageToggle("home");
-        })
-        $(".menu_expr").on("click", function () {
-            PageToggle("expr");
-        })
-        $(".menu_acad").on("click", function () {
-            PageToggle("acad");
-        })
-        $(".menu_contact").on("click", function () {
-            PageToggle("contact");
-        })
-        $(".menu_work").on("click", function () {
-            PageToggle("work");
-        })
-        $(".logo").on("click", function () {
-            PageToggle("home");
-    
-        })
-            */
-    function PageToggle(pageId) {
-        //Initialize
-        document.getElementById("intro-card").style.display = "none";
-        document.getElementById("expt-cards").style.display = "none";
-        document.getElementById("acad-cards").style.display = "none";
-        document.getElementById("contact-cards").style.display = "none";
-        document.getElementById("work-cards").style.display = "none";
-
-        document.getElementById("menu_home").style.color = "#333";
-        document.getElementById("menu_expr").style.color = "#333";
-        document.getElementById("menu_acad").style.color = "#333";
-        document.getElementById("menu_contact").style.color = "#333";
-        document.getElementById("menu_work").style.color = "#333";
-
-        //Toggle
-        switch (pageId) {
-            case "home":
-                document.getElementById("menu_home").style.color = "#6ab04c";
-                document.getElementById("intro-card").style.display = "block";
-                break;
-            case "expr":
-                document.getElementById("menu_expr").style.color = "#6ab04c";
-                document.getElementById("expt-cards").style.display = "block";
-                break;
-            case "acad":
-                document.getElementById("menu_acad").style.color = "#6ab04c";
-                document.getElementById("acad-cards").style.display = "block";
-                break;
-            case "contact":
-                document.getElementById("menu_contact").style.color = "#6ab04c";
-                document.getElementById("contact-cards").style.display = "block";
-                break;
-            case "work":
-                document.getElementById("menu_work").style.color = "#6ab04c";
-                document.getElementById("work-cards").style.display = "block";
-                break;
-            default:
-                document.getElementById("menu_home").style.color = "#6ab04c";
-                document.getElementById("intro-card").style.display = "block";
-                break;
-        }
-        if (pageId != "init") {
-            $('.menu').toggleClass("show");
-        }
+    function closeMenu() {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
     }
 
-</script>
-</body>
+    // Scroll-reveal animation
+    var revealElements = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry, index) {
+            if (entry.isIntersecting) {
+                setTimeout(function () {
+                    entry.target.classList.add('visible');
+                }, index * 80);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
+    revealElements.forEach(function (el) {
+        observer.observe(el);
+    });
+</script>
+
+</body>
 </html>
