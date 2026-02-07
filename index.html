@@ -5,6 +5,7 @@
     <title>Anish Thanaseelan Kaspaar — Senior Solution Architect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Senior Solution Architect with 18+ years in Retail, Supply Chain & Logistics. TOGAF & Azure Certified.">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -81,16 +82,25 @@
         }
 
         .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.38rem;
+            font-weight: 700;
             color: var(--text-primary);
             text-decoration: none;
-            letter-spacing: -0.02em;
+            letter-spacing: 0;
         }
 
         .nav-logo span {
             color: var(--accent);
+        }
+
+        .nav-logo .cursor {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
         .nav-links {
@@ -200,9 +210,9 @@
         }
 
         /* ========================================
-           Hero
+           Intro
            ======================================== */
-        .hero {
+        .intro {
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -210,21 +220,21 @@
             padding-top: 64px;
         }
 
-        .hero-inner {
+        .intro-inner {
             max-width: var(--content-width);
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 64px;
-            align-items: center;
+            align-items: start;
             width: 100%;
         }
 
-        .hero-text {
+        .intro-text {
             animation: fadeInUp 0.8s ease-out;
         }
 
-        .hero-greeting {
+        .intro-greeting {
             font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 0.12em;
@@ -234,7 +244,7 @@
             display: inline-block;
         }
 
-        .hero-name {
+        .intro-name {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 5vw, 3.4rem);
             font-weight: 700;
@@ -244,7 +254,7 @@
             letter-spacing: -0.03em;
         }
 
-        .hero-role {
+        .intro-role {
             font-size: 1.15rem;
             color: var(--text-secondary);
             margin-bottom: 24px;
@@ -252,7 +262,7 @@
             line-height: 1.6;
         }
 
-        .hero-summary {
+        .intro-summary {
             font-size: 0.95rem;
             color: var(--text-muted);
             line-height: 1.8;
@@ -260,7 +270,7 @@
             max-width: 520px;
         }
 
-        .hero-cta {
+        .intro-cta {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
@@ -304,44 +314,40 @@
             transform: translateY(-1px);
         }
 
-        .hero-photo {
+        .intro-photo {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            padding-top: 34px;
             animation: fadeIn 1s ease-out 0.3s both;
         }
 
-        .hero-photo-wrapper {
+        .intro-photo-wrapper {
             position: relative;
-            width: 380px;
-            height: 440px;
+            width: 420px;
+            height: 490px;
         }
 
-        .hero-photo-img {
+        .intro-photo-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 12px;
             filter: grayscale(20%);
-            transition: filter 0.5s;
+            transition: filter 0.5s, box-shadow 0.5s;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
-        .hero-photo-wrapper:hover .hero-photo-img {
+        .intro-photo-wrapper:hover .intro-photo-img {
             filter: grayscale(0%);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
         }
 
-        .hero-photo-accent {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            z-index: -1;
+        .intro-photo-accent {
+            display: none;
         }
 
-        .hero-stats {
+        .intro-stats {
             display: flex;
             gap: 40px;
             margin-top: 40px;
@@ -349,7 +355,7 @@
             border-top: 1px solid var(--border);
         }
 
-        .hero-stat-num {
+        .intro-stat-num {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 700;
@@ -357,7 +363,7 @@
             line-height: 1;
         }
 
-        .hero-stat-label {
+        .intro-stat-label {
             font-size: 0.78rem;
             color: var(--text-muted);
             margin-top: 4px;
@@ -937,30 +943,30 @@
                 --section-gap: 72px;
             }
 
-            .hero-inner {
+            .intro-inner {
                 grid-template-columns: 1fr;
                 gap: 40px;
                 text-align: center;
             }
 
-            .hero-summary {
+            .intro-summary {
                 max-width: 100%;
             }
 
-            .hero-cta {
+            .intro-cta {
                 justify-content: center;
             }
 
-            .hero-photo {
+            .intro-photo {
                 order: -1;
             }
 
-            .hero-photo-wrapper {
+            .intro-photo-wrapper {
                 width: 280px;
                 height: 320px;
             }
 
-            .hero-stats {
+            .intro-stats {
                 justify-content: center;
             }
 
@@ -1028,11 +1034,11 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero-stats {
+            .intro-stats {
                 gap: 24px;
             }
 
-            .hero-photo-wrapper {
+            .intro-photo-wrapper {
                 width: 220px;
                 height: 260px;
             }
@@ -1046,9 +1052,9 @@
      ============================ -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
-        <a href="#hero" class="nav-logo">A<span>.</span>K</a>
+        <a href="#intro" class="nav-logo">anish<span>:&gt;</span><span class="cursor">_</span></a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+            <li><a href="#intro" onclick="closeMenu()">Home</a></li>
             <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
             <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
             <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
@@ -1064,21 +1070,21 @@
 </nav>
 
 <!-- ============================
-     HERO / ABOUT ME
+     INTRO / ABOUT ME
      ============================ -->
-<section class="hero" id="hero">
-    <div class="hero-inner section-inner">
-        <div class="hero-text">
-            <span class="hero-greeting">Hello, I'm</span>
-            <h1 class="hero-name">Anish Thanaseelan<br>Kaspaar</h1>
-            <p class="hero-role">Enterprise Solution Architect | Supply Chain &amp; Logistics | TOGAF &amp; Azure Certified</p>
-            <p class="hero-summary">
+<section class="intro" id="intro">
+    <div class="intro-inner section-inner">
+        <div class="intro-text">
+            <span class="intro-greeting">Hello, I'm</span>
+            <h1 class="intro-name">Anish Thanaseelan<br>Kaspaar</h1>
+            <p class="intro-role">Enterprise Solution Architect | Supply Chain &amp; Logistics | TOGAF &amp; Azure Certified</p>
+            <p class="intro-summary">
                 Enterprise Solution Architect and Supply Chain SME with 19+ years of experience in software development,
                 specializing in delivering win-win solutions and complex legacy decoupling. Bridges the gap between
                 commercial strategy and technical execution, ensuring enterprise-level migrations are technically viable
                 and operationally secure. TOGAF and Azure Certified with expertise in end-to-end B2B application architecture.
             </p>
-            <div class="hero-cta">
+            <div class="intro-cta">
                 <a href="https://www.linkedin.com/in/anish-kaspaar/" class="btn btn-primary" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
@@ -1089,26 +1095,26 @@
                     <i class="fab fa-medium"></i> Medium
                 </a>
             </div>
-            <div class="hero-stats">
+            <div class="intro-stats">
                 <div>
-                    <div class="hero-stat-num">19+</div>
-                    <div class="hero-stat-label">Years Experience</div>
+                    <div class="intro-stat-num">19+</div>
+                    <div class="intro-stat-label">Years Experience</div>
                 </div>
                 <div>
-                    <div class="hero-stat-num">9</div>
-                    <div class="hero-stat-label">Certifications</div>
+                    <div class="intro-stat-num">9</div>
+                    <div class="intro-stat-label">Certifications</div>
                 </div>
                 <div>
-                    <div class="hero-stat-num">5+</div>
-                    <div class="hero-stat-label">Markets Served</div>
+                    <div class="intro-stat-num">5+</div>
+                    <div class="intro-stat-label">Markets Served</div>
                 </div>
             </div>
         </div>
-        <div class="hero-photo">
-            <div class="hero-photo-wrapper">
-                <img src="profile_picture.jpg" alt="Anish Thanaseelan Kaspaar" class="hero-photo-img"
+        <div class="intro-photo">
+            <div class="intro-photo-wrapper">
+                <img src="profile_picture.jpg" alt="Anish Thanaseelan Kaspaar" class="intro-photo-img"
                      onerror="this.style.background='linear-gradient(135deg,#e0e0e0,#bdbdbd)';this.alt='Photo'">
-                <div class="hero-photo-accent"></div>
+                <div class="intro-photo-accent"></div>
             </div>
         </div>
     </div>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    text { fill: #1a1a1a; }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #ffffff; }
+    }
+  </style>
+  <text x="32" y="42" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="22" font-weight="bold">a:&gt;_</text>
+</svg>
