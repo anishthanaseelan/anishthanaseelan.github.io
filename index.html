@@ -105,7 +105,7 @@
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 24px;
             list-style: none;
         }
 
@@ -760,7 +760,7 @@
             padding: 32px;
             border: 1px solid var(--border-light);
             border-radius: var(--radius);
-            background: var(--bg-primary);
+            background: var(--bg-secondary);
         }
 
         .edu-degree {
@@ -1057,8 +1057,10 @@
             <li><a href="#intro" onclick="closeMenu()">Home</a></li>
             <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
             <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
-            <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
-            <li><a href="#projects" onclick="closeMenu()">Works</a></li>
+            <li><a href="#achievements" onclick="closeMenu()">Achievements</a></li>
+            <li><a href="#projects" onclick="closeMenu()" style="white-space:nowrap">Open Projects</a></li>
+            <li><a href="#certifications" onclick="closeMenu()">Credentials</a></li>
+            <li><a href="#publications" onclick="closeMenu()">Publication</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -1349,8 +1351,25 @@
 <section class="certifications" id="certifications">
     <div class="section-inner">
         <div class="section-label">Credentials</div>
-        <h2 class="section-title">Licenses &amp; Certifications</h2>
-        <h3 class="certs-subheading">Technology</h3>
+        <h2 class="section-title">Education &amp; Certifications</h2>
+        <h3 class="certs-subheading">Education</h3>
+        <div class="edu-grid">
+
+            <div class="edu-card reveal">
+                <div class="edu-degree">Master of Science (MS)</div>
+                <div class="edu-field">Software Engineering</div>
+                <div class="edu-school">Birla Institute of Technology, Pilani</div>
+            </div>
+
+            <div class="edu-card reveal">
+                <div class="edu-degree">Bachelor of Engineering (BE)</div>
+                <div class="edu-field">Electronics and Communication</div>
+                <div class="edu-school">Anna University, Chennai</div>
+            </div>
+
+        </div>
+
+        <h3 class="certs-subheading">Certifications</h3>
         <div class="certs-grid">
 
             <div class="cert-card reveal">
@@ -1401,11 +1420,6 @@
                 </div>
             </div>
 
-        </div>
-
-        <h3 class="certs-subheading">Business</h3>
-        <div class="certs-grid">
-
             <div class="cert-card reveal">
                 <div class="cert-icon togaf"><i class="fas fa-sitemap"></i></div>
                 <div class="cert-info">
@@ -1435,37 +1449,12 @@
 </section>
 
 <!-- ============================
-     EDUCATION
-     ============================ -->
-<section class="education" id="education">
-    <div class="section-inner">
-        <div class="section-label">Academics</div>
-        <h2 class="section-title">Education</h2>
-        <div class="edu-grid">
-
-            <div class="edu-card reveal">
-                <div class="edu-degree">Master of Science (MS)</div>
-                <div class="edu-field">Software Engineering</div>
-                <div class="edu-school">Birla Institute of Technology, Pilani</div>
-            </div>
-
-            <div class="edu-card reveal">
-                <div class="edu-degree">Bachelor of Engineering (BE)</div>
-                <div class="edu-field">Electronics and Communication</div>
-                <div class="edu-school">Anna University, Chennai</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ============================
      PUBLICATIONS
      ============================ -->
 <section class="publications" id="publications">
     <div class="section-inner">
         <div class="section-label">Writing</div>
-        <h2 class="section-title">Publications</h2>
+        <h2 class="section-title">Publication</h2>
         <div class="publication-card reveal">
             <div class="pub-icon"><i class="fab fa-medium"></i></div>
             <div class="pub-info">
