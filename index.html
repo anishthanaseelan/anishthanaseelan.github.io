@@ -1264,6 +1264,7 @@
                 font-size: 9.5pt;
                 color: #333333 !important;
                 line-height: 1.6;
+                text-align: left !important;
             }
 
             .intro-summary::before {
@@ -1278,6 +1279,7 @@
                 color: #1a1a1a;
                 font-family: 'DM Sans', sans-serif;
                 font-weight: 600;
+                text-align: left !important;
             }
 
             /* --- Expertise --- */
@@ -1317,11 +1319,21 @@
             }
 
             .expertise-card p {
-                display: none !important;
+                display: inline !important;
+                font-size: 8.5pt;
+                color: #555555 !important;
+                line-height: 1.5;
+            }
+
+            .expertise-card p::after {
+                content: ' \2014  ';
+                font-weight: 400;
+                color: #888888;
+                margin: 0 2pt;
             }
 
             .tech-tags {
-                display: inline;
+                display: inline !important;
                 margin-top: 0;
             }
 
@@ -1330,8 +1342,9 @@
                 padding: 0;
                 border: none;
                 background: transparent !important;
-                font-size: 9pt;
+                font-size: 8.5pt;
                 color: #555555;
+                font-weight: 500;
             }
 
             .tech-tag::after {
@@ -1346,6 +1359,8 @@
             /* --- Work Experience --- */
             .experience {
                 background: #ffffff !important;
+                break-before: page;
+                page-break-before: always;
             }
 
             .timeline {
@@ -1573,16 +1588,19 @@
                 border: none !important;
                 border-radius: 0 !important;
                 background: transparent !important;
+                text-align: left !important;
             }
 
             .pub-info h3 {
                 font-size: 9.5pt;
                 margin-bottom: 3pt;
+                text-align: left !important;
             }
 
             .pub-info p {
                 font-size: 8.5pt;
                 line-height: 1.5;
+                text-align: left !important;
             }
 
             .pub-link {
