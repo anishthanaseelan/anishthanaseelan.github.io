@@ -592,6 +592,31 @@
             font-weight: 600;
         }
 
+        .timeline-subphases {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .timeline-subphase-header {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 4px;
+        }
+
+        .timeline-subphase-header span {
+            font-weight: 400;
+            color: var(--text-muted);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
         /* ========================================
            Achievements
            ======================================== */
@@ -1259,33 +1284,91 @@
                     <span class="timeline-role">Architect — Technology</span>
                     <span class="timeline-period">May 2008 — Present · 18+ yrs</span>
                 </div>
-                <div class="timeline-company">Cognizant Technology Solutions · Greater Leeds Area, UK</div>
+                <div class="timeline-company">Cognizant Technology Solutions</div>
                 <div class="timeline-desc">
                     Enterprise Solution Architect across Cognizant's global business units (UK, USA, and India),
-                    bridging commercial strategy and technical execution to deliver large-scale enterprise solutions
-                    in retail and supply chain for Walmart and ASDA.
+                    bridging commercial strategy and technical execution to deliver large-scale retail and supply
+                    chain solutions for Walmart and ASDA.
                 </div>
-                <div class="timeline-highlights">
-                    <div class="timeline-highlight">
-                        <strong>ASDA Divestiture</strong> — Led the sell-side architectural separation for the
-                        &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in history.
-                        Orchestrated the surgical removal of a &pound;20bn revenue entity from a deeply integrated global
-                        ecosystem. Led a 300-person technology team, responsible for technology governance, IP protection,
-                        Technology Vision &amp; Policies, and system/data migration strategy for transition states.
+                <div class="timeline-subphases">
+
+                    <!-- UK Phase -->
+                    <div class="timeline-subphase">
+                        <div class="timeline-subphase-header">United Kingdom <span>· Sep 2016 — Present</span></div>
+                        <div class="timeline-highlights">
+                            <div class="timeline-highlight">
+                                <strong>ASDA Divestiture</strong> — Enterprise Architect for the sell-side architectural separation of the
+                                &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in history.
+                                Orchestrated the surgical removal of a &pound;20bn revenue entity from a deeply integrated global
+                                ecosystem. Led a 300-person technology team, responsible for technology governance, IP protection,
+                                Technology Vision &amp; Policies, and system/data migration strategy for transition states.
+                                Architected the IDDI integration layer — the umbilical cord between ASDA Future and
+                                ASDA Legacy — enabling controlled decoupling during the transition. Personally
+                                designed the Transition Control Framework governing the end-to-end separation programme.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>In-Market Node (IMN)</strong> — SME, Technology Architect, and Delivery Manager
+                                for Order Processing. Mentored a new team to deliver this short-term POC, and developed a
+                                new data model representation to enable parallel development of dependent modules.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>ASDA-George Clothing</strong> — Solutions Architect and WMS SME. Led a team
+                                of 15 developers to design, build, and pilot the warehouse management solution for
+                                ASDA's Clothing Depots, including the WCS integration with Dematic's automated sortation system.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>Pop-up e-Commerce Warehouses</strong> — Strategised and delivered WMS for
+                                40+ pop-up e-Commerce warehouses under 3 months, coordinating a 20-member global
+                                team to meet Walmart's rapid fulfilment expansion targets.
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-highlight">
-                        <strong>ASDA-George Clothing</strong> — WMS SME and Solutions Architect.
-                        Designed and developed the WMS integration solution for the WCS (Dematic) warehouse automation system.
+
+                    <!-- US Phase -->
+                    <div class="timeline-subphase">
+                        <div class="timeline-subphase-header">United States <span>· Jul 2011 — Sep 2016 · Bentonville, AR</span></div>
+                        <div class="timeline-highlights">
+                            <div class="timeline-highlight">
+                                <strong>GLS NextGen</strong> — WMS SME and Integration Specialist.
+                                Led the monolith-to-microservices migration, mentoring the team in adopting TDD while
+                                maintaining delivery to market.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>e-Commerce Distribution Centre</strong> — Application Architect for Walmart's
+                                e-Commerce DC fulfilment stack. Owned the solution architecture for Order Processing,
+                                Wave Planning, and Cartonisation subsystems — designing order batching strategies, optimal
+                                carton selection algorithms, and wave grouping logic that scaled across multiple DC sites.
+                                Led 2 agile teams delivering end-to-end fulfilment capabilities including last-mile carrier
+                                integration with UPS, FedEx, and USPS.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>Imports Distribution Centres</strong> — Designed solution architecture for
+                                Walmart's Imports DC warehouse management sub-solutions. Created base development
+                                frameworks, test automation suites, and code quality protocols adopted across
+                                multiple delivery streams.
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-highlight">
-                        <strong>US e-Commerce Distribution Centre</strong> — Application Architect for GLS
-                        Order Processing, Wave Planning, Cartonisation, and Last-mile Carrier Integration (UPS, FedEx, USPS).
+
+                    <!-- India Phase -->
+                    <div class="timeline-subphase">
+                        <div class="timeline-subphase-header">India <span>· May 2008 — Jul 2011 · Chennai</span></div>
+                        <div class="timeline-highlights">
+                            <div class="timeline-highlight">
+                                <strong>Imports DC — Core Systems</strong> — Lead Designer and Developer for
+                                business-critical Imports DC subsystems including Order Management, Order Filling,
+                                and warehouse automation interfaces (FKI BOSS integration). Built foundational GLS
+                                frameworks — batch processing, label printing, alert management — that underpinned
+                                subsequent DC rollouts.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>Capability Building</strong> — Mentored 30+ associates through structured
+                                KT sessions and classroom training; developed internal tooling including static and
+                                dynamic code analysers for eSQL/C.
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-highlight">
-                        <strong>GLS NextGen</strong> — WMS SME and Integration Specialist.
-                        Led monolith-to-microservices migration; mentored the team in adopting TDD while
-                        maintaining delivery to market.
-                    </div>
+
                 </div>
             </div>
 
@@ -1295,10 +1378,25 @@
                     <span class="timeline-role">Programmer Analyst</span>
                     <span class="timeline-period">Jul 2006 — Apr 2008 · 1 yr 10 mos</span>
                 </div>
-                <div class="timeline-company">Source HOV Pvt. Ltd · Chennai, India</div>
+                <div class="timeline-company">Source HOV Pvt. Ltd (formerly Lason India Pvt. Ltd) · Chennai, India</div>
                 <div class="timeline-desc">
-                    Software development and database management, building foundational expertise in RDBMS
-                    and application development.
+                    Software development for Fortune 500 Healthcare clients, delivering data processing
+                    and integration solutions across EDI, file transfer, and workflow automation systems.
+                </div>
+                <div class="timeline-highlights">
+                    <div class="timeline-highlight">
+                        <strong>Provider Data &amp; NSF Conversion</strong> — Designed and developed a generic
+                        Provider Data import module and NSF (National Standard Format) data conversion module
+                        for multiple Fortune 500 Healthcare clients. Responsible for requirements analysis,
+                        HLD/LLD documentation, estimation, and build management using Source Code Control System.
+                        Integrated applications with CTRACKER, an in-house workflow management tool.
+                    </div>
+                    <div class="timeline-highlight">
+                        <strong>Healthcare EDI Collation</strong> — Designed and developed the Collate process
+                        for collecting, packaging, and securely transferring images and EDI data to client FTP sites.
+                        Implemented format conversion, PGP encryption, PKZIP compression, and scheduled SFTP
+                        transfers to meet strict delivery windows.
+                    </div>
                 </div>
             </div>
 
@@ -1316,27 +1414,39 @@
         <div class="achievements-grid">
 
             <div class="achievement-card reveal">
-                <div class="achievement-metric">600%</div>
-                <h3>Releasewave Re-engineering</h3>
-                <p>Reduced line count by 75%, regression effort by 60%, and runtime by 600%. Enabled processing of a million cases in 20 minutes, unlocking GLS for US Import DCs.</p>
+                <div class="achievement-metric">300</div>
+                <h3>Divestiture Technology Governance</h3>
+                <p>Led a 300-person technology team through the &pound;6.8bn ASDA-Walmart separation, establishing technology governance frameworks, IP protection protocols, and system migration strategies for one of the UK's largest retail carve-outs.</p>
             </div>
 
             <div class="achievement-card reveal">
-                <div class="achievement-metric">35%</div>
-                <h3>Performance Tracking &amp; Anomaly Detection</h3>
-                <p>Identified numerous Releasewave performance issues through innovative data analytics, reducing runtime by 35% and helping Walmart keep the promise of 1-Hour delivery.</p>
+                <div class="achievement-metric">40+</div>
+                <h3>Rapid DC Deployment</h3>
+                <p>Delivered warehouse management systems for 40+ pop-up e-Commerce distribution centres in under 3 months, enabling Walmart's rapid fulfilment network expansion across the US.</p>
             </div>
 
             <div class="achievement-card reveal">
                 <div class="achievement-metric">100%</div>
                 <h3>Defect Removal Efficiency</h3>
-                <p>As part of the NextGen integration project, delivered simplified, production-quality deliverables consistently with zero reopens and 100% defect removal efficiency.</p>
+                <p>Delivered production-grade integration deliverables for the GLS NextGen programme with zero defect reopens and 100% defect removal efficiency — consistently raising the bar for code quality across the team.</p>
             </div>
 
             <div class="achievement-card reveal">
                 <div class="achievement-metric">CPS</div>
                 <h3>Win-Win Stakeholder Solutions</h3>
                 <p>Used the Osborn Creative Problem Solving technique for the GDS elimination initiative, creating a solution that satisfied all stakeholders and ensured smooth migration to GLS.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">35%</div>
+                <h3>Performance Tracking &amp; Anomaly Detection</h3>
+                <p>Designed a data-driven performance tracking and anomaly detection approach for the Releasewave subsystem, reducing batch runtime by 35% and helping Walmart sustain its 1-Hour delivery promise.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">600%</div>
+                <h3>Releasewave Re-engineering</h3>
+                <p>Re-engineered the Releasewave batch subsystem, reducing codebase by 75%, regression effort by 60%, and runtime by 600%. Enabled processing of one million cases in 20 minutes, unlocking GLS for Walmart's US Import DCs.</p>
             </div>
 
         </div>
