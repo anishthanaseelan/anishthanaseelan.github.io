@@ -387,6 +387,10 @@
             display: none;
         }
 
+        .print-header {
+            display: none;
+        }
+
         .intro-stats {
             display: flex;
             gap: 40px;
@@ -1108,6 +1112,502 @@
                 height: 260px;
             }
         }
+
+        /* ========================================
+           Print Styles — CV / PDF Output
+           ======================================== */
+        @media print {
+            /* --- Page setup --- */
+            @page {
+                size: A4 portrait;
+                margin: 15mm 20mm;
+            }
+
+            /* --- Base resets --- */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            html {
+                font-size: 10pt;
+                scroll-behavior: auto;
+            }
+
+            body {
+                background: #ffffff !important;
+                color: #1a1a1a !important;
+                line-height: 1.5;
+                -webkit-font-smoothing: auto;
+            }
+
+            /* --- Kill animations / transforms / shadows --- */
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+
+            /* --- Ensure scroll-reveal elements print --- */
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            /* --- Hide non-CV elements --- */
+            .nav,
+            .intro-photo,
+            .intro-stats,
+            .intro-cta,
+            .intro-greeting,
+            .projects,
+            .contact,
+            .footer,
+            .timeline-dot,
+            .timeline::before,
+            .expertise-icon,
+            .cert-icon,
+            .pub-icon,
+            .section-label {
+                display: none !important;
+            }
+
+            /* --- Show print header --- */
+            .print-header {
+                display: block !important;
+                text-align: center;
+                padding: 0 0 12pt 0;
+                margin-bottom: 12pt;
+                border-bottom: 2pt solid #6ab04c;
+            }
+
+            .print-name {
+                font-family: 'Playfair Display', serif;
+                font-size: 22pt;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin: 0 0 4pt 0;
+                letter-spacing: -0.02em;
+            }
+
+            .print-role {
+                font-size: 10pt;
+                color: #555555;
+                margin: 0 0 6pt 0;
+            }
+
+            .print-contact {
+                font-size: 8.5pt;
+                color: #888888;
+            }
+
+            .print-separator {
+                margin: 0 6pt;
+                color: #cccccc;
+            }
+
+            /* --- Section resets --- */
+            section {
+                padding: 10pt 0 !important;
+                background: #ffffff !important;
+            }
+
+            .section-inner {
+                max-width: 100%;
+            }
+
+            .section-title {
+                font-size: 11pt !important;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                border-bottom: 0.5pt solid #cccccc;
+                padding-bottom: 4pt;
+                margin-bottom: 10pt !important;
+                color: #1a1a1a !important;
+                font-family: 'DM Sans', sans-serif !important;
+                font-weight: 600;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .section-subtitle {
+                display: none !important;
+            }
+
+            /* --- Intro / Professional Summary --- */
+            .intro {
+                min-height: auto !important;
+                padding-top: 0 !important;
+            }
+
+            .intro-inner {
+                display: block !important;
+            }
+
+            .intro-text {
+                animation: none !important;
+            }
+
+            .intro-name {
+                display: none !important;
+            }
+
+            .intro-role {
+                display: none !important;
+            }
+
+            .intro-summary {
+                max-width: 100% !important;
+                margin-bottom: 0 !important;
+                font-size: 9.5pt;
+                color: #333333 !important;
+                line-height: 1.6;
+            }
+
+            .intro-summary::before {
+                content: 'Professional Summary';
+                display: block;
+                font-size: 11pt;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                border-bottom: 0.5pt solid #cccccc;
+                padding-bottom: 4pt;
+                margin-bottom: 8pt;
+                color: #1a1a1a;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 600;
+            }
+
+            /* --- Expertise --- */
+            .expertise {
+                background: #ffffff !important;
+            }
+
+            .expertise-grid {
+                display: block !important;
+            }
+
+            .expertise-card {
+                display: block;
+                padding: 2pt 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                background: transparent !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .expertise-card::before {
+                display: none !important;
+            }
+
+            .expertise-card h3 {
+                display: inline;
+                font-size: 9.5pt;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .expertise-card h3::after {
+                content: ' \2014  ';
+                font-weight: 400;
+                color: #888888;
+            }
+
+            .expertise-card p {
+                display: none !important;
+            }
+
+            .tech-tags {
+                display: inline;
+                margin-top: 0;
+            }
+
+            .tech-tag {
+                display: inline;
+                padding: 0;
+                border: none;
+                background: transparent !important;
+                font-size: 9pt;
+                color: #555555;
+            }
+
+            .tech-tag::after {
+                content: ' \00b7  ';
+                color: #aaaaaa;
+            }
+
+            .tech-tag:last-child::after {
+                content: '';
+            }
+
+            /* --- Work Experience --- */
+            .experience {
+                background: #ffffff !important;
+            }
+
+            .timeline {
+                padding-left: 0 !important;
+            }
+
+            .timeline-item {
+                padding-bottom: 12pt !important;
+            }
+
+            .timeline-header {
+                margin-bottom: 2pt !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .timeline-role {
+                font-size: 10pt;
+            }
+
+            .timeline-period {
+                font-size: 8.5pt;
+            }
+
+            .timeline-company {
+                font-size: 9pt;
+                margin-bottom: 4pt !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .timeline-desc {
+                font-size: 9pt;
+                line-height: 1.5;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .timeline-subphases {
+                margin-top: 8pt !important;
+                gap: 10pt !important;
+            }
+
+            .timeline-subphase {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .timeline-subphase-header {
+                font-size: 9pt;
+                color: #6ab04c !important;
+                border-bottom: none !important;
+                padding-bottom: 2pt !important;
+                margin-bottom: 2pt !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .timeline-subphase-header span {
+                color: #888888 !important;
+            }
+
+            .timeline-highlights {
+                margin-top: 4pt !important;
+                gap: 3pt !important;
+            }
+
+            .timeline-highlight {
+                font-size: 8.5pt;
+                padding-left: 12pt !important;
+                line-height: 1.5;
+            }
+
+            .timeline-highlight::before {
+                content: '\2022' !important;
+                font-size: 8pt;
+                color: #6ab04c;
+            }
+
+            .timeline-highlight strong {
+                font-weight: 600;
+            }
+
+            /* --- Achievements --- */
+            .achievements {
+                background: #ffffff !important;
+            }
+
+            .achievements-grid {
+                display: block !important;
+            }
+
+            .achievement-card {
+                padding: 6pt 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                background: transparent !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .achievement-metric {
+                display: inline;
+                font-size: 10pt;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                color: #6ab04c !important;
+                margin-bottom: 0;
+            }
+
+            .achievement-card h3 {
+                display: inline;
+                font-size: 9.5pt;
+                margin-bottom: 0;
+            }
+
+            .achievement-metric::after {
+                content: ' \2014  ';
+                font-weight: 400;
+                color: #888888;
+                font-family: 'DM Sans', sans-serif;
+            }
+
+            .achievement-card p {
+                display: block;
+                font-size: 8.5pt;
+                margin-top: 2pt;
+                line-height: 1.5;
+            }
+
+            /* --- Certifications (merged section) --- */
+            .certifications {
+                background: #ffffff !important;
+            }
+
+            .certs-subheading {
+                font-size: 9.5pt;
+                margin-bottom: 6pt !important;
+                margin-top: 10pt !important;
+                color: #333333 !important;
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            .certs-subheading:first-of-type {
+                margin-top: 0 !important;
+            }
+
+            /* Education */
+            .edu-grid {
+                display: block !important;
+            }
+
+            .edu-card {
+                padding: 3pt 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                background: transparent !important;
+            }
+
+            .edu-degree {
+                display: inline;
+                font-size: 9.5pt;
+            }
+
+            .edu-degree::after {
+                content: ' \2014  ';
+                font-weight: 400;
+                color: #888888;
+            }
+
+            .edu-field {
+                display: inline;
+                font-size: 9.5pt;
+                color: #333333;
+            }
+
+            .edu-school {
+                display: block;
+                font-size: 8.5pt;
+                margin-top: 1pt;
+            }
+
+            /* Certifications */
+            .certs-grid {
+                display: block !important;
+            }
+
+            .cert-card {
+                display: block;
+                padding: 2pt 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                background: transparent !important;
+            }
+
+            .cert-info {
+                display: inline;
+            }
+
+            .cert-info h4 {
+                display: inline;
+                font-size: 9pt;
+            }
+
+            .cert-info h4::after {
+                content: ' \2014  ';
+                font-weight: 400;
+                color: #888888;
+            }
+
+            .cert-info p {
+                display: inline;
+                font-size: 8.5pt;
+            }
+
+            /* --- Publications --- */
+            .publications {
+                background: #ffffff !important;
+            }
+
+            .publication-card {
+                display: block !important;
+                padding: 6pt 0 !important;
+                border: none !important;
+                border-radius: 0 !important;
+                background: transparent !important;
+            }
+
+            .pub-info h3 {
+                font-size: 9.5pt;
+                margin-bottom: 3pt;
+            }
+
+            .pub-info p {
+                font-size: 8.5pt;
+                line-height: 1.5;
+            }
+
+            .pub-link {
+                font-size: 8.5pt;
+                color: #6ab04c !important;
+                text-decoration: none;
+            }
+
+            .pub-link::after {
+                content: ' (' attr(href) ')';
+                font-size: 7.5pt;
+                color: #888888;
+                font-weight: 400;
+            }
+
+            .pub-link i {
+                display: none !important;
+            }
+
+            /* --- Links: show URLs --- */
+            a[href] {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1136,6 +1636,18 @@
     </div>
 </nav>
 
+<div class="print-header" aria-hidden="true">
+    <h1 class="print-name">Anish Thanaseelan Kaspaar</h1>
+    <p class="print-role">Enterprise Solution Architect | Supply Chain &amp; Logistics | TOGAF &amp; Azure Certified</p>
+    <div class="print-contact">
+        <span>linkedin.com/in/anish-kaspaar</span>
+        <span class="print-separator">|</span>
+        <span>github.com/anishthanaseelan</span>
+        <span class="print-separator">|</span>
+        <span>medium.com/@anishthanaseelan</span>
+    </div>
+</div>
+
 <!-- ============================
      INTRO / ABOUT ME
      ============================ -->
@@ -1161,6 +1673,9 @@
                 <a href="https://medium.com/@anishthanaseelan" class="btn btn-outline" target="_blank" rel="noopener">
                     <i class="fab fa-medium"></i> Medium
                 </a>
+                <button onclick="window.print()" class="btn btn-outline" aria-label="Download CV as PDF">
+                    <i class="fas fa-download"></i> Download CV
+                </button>
             </div>
             <div class="intro-stats">
                 <div>
