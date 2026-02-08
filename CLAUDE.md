@@ -11,3 +11,12 @@
 - Review existing Notable Achievements entries for tone and maturity
 - Add recent achievements (post-ASDA Divestiture era)
 - Ensure achievements reflect current seniority and impact level
+
+### 3. Add China CBTA Experience
+- Add China Cross-Border Trade Automation (CBTA) experience to Work Experience section
+- Include relevant project details, scope, and outcomes
+
+### 4. Add Claude Code & Agent Development Experience
+- Add experience with Claude Code (Anthropic's AI coding assistant)
+- Document Code Puppy agents and sub-agent creation work
+- Include related AI/LLM integration use cases and implementations
