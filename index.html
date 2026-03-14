@@ -428,6 +428,24 @@
             gap: 24px;
         }
 
+        .expertise-card.featured {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .expertise-card.featured .expertise-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+            margin-bottom: 0;
+            margin-top: 4px;
+        }
+
+        .expertise-card.featured .feat-body {
+            flex: 1;
+        }
+
         .expertise-card {
             padding: 32px;
             border: 1px solid var(--border-light);
@@ -1729,6 +1747,20 @@
         <h2 class="section-title">Areas of Expertise</h2>
         <div class="expertise-grid">
 
+            <div class="expertise-card featured reveal">
+                <div class="expertise-icon"><i class="fas fa-robot"></i></div>
+                <div class="feat-body">
+                    <h3>Agentic AI</h3>
+                    <p>Practitioner-level experience across AI coding assistants, LLMs, and agentic systems — grounded in direct production deployments. Has run supervised agentic research workflows over six million lines of multi-language legacy code, and conducted unsupervised greenfield development using multi-model AI assistants. Assessed security, privacy, and reliability implications of agentic AI in enterprise settings, covering AI-generated code vulnerabilities and OWASP LLM threat taxonomies. Published multiple articles analysing the empirical research landscape around AI productivity and the evolving role of the architect in the age of AI.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Anthropic Models &amp; Tools</span>
+                        <span class="tech-tag">Agentic Workflows</span>
+                        <span class="tech-tag">OWASP LLM</span>
+                        <span class="tech-tag">AI Thought Leadership</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-drafting-compass"></i></div>
                 <h3>Solution Architecture</h3>
@@ -2146,6 +2178,16 @@
                    Covers stakeholder engagement, AS-IS discovery, ideation, cost-benefit convolution,
                    and functional flow identification to maximise ROI confidence and create win-win outcomes.</p>
                 <a href="https://medium.com/@anishthanaseelan/an-approach-to-pre-development-discovery-using-cps-9a9c9c54de29" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fab fa-medium"></i></div>
+            <div class="pub-info">
+                <h3>The Architect's New Job</h3>
+                <p>When agents write the code, the only thing that matters is how well you broke the problem down.
+                   Explores how AI-driven development shifts the architect's role from writing code to decomposing
+                   problems — and why that makes the job harder, not easier.</p>
+                <a href="https://medium.com/@anishthanaseelan/the-architects-new-job-398eaff2f461" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
