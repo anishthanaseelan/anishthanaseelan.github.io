@@ -1658,11 +1658,11 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#intro" onclick="closeMenu()">Home</a></li>
             <li><a href="#expertise" onclick="closeMenu()">Expertise</a></li>
+            <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
             <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
             <li><a href="#achievements" onclick="closeMenu()">Achievements</a></li>
-            <li><a href="#projects" onclick="closeMenu()" style="white-space:nowrap">Open Projects</a></li>
             <li><a href="#certifications" onclick="closeMenu()">Credentials</a></li>
-            <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+            <li><a href="#projects" onclick="closeMenu()" style="white-space:nowrap">Open Projects</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -1763,6 +1763,8 @@
                         <span class="tech-tag">AI Thought Leadership</span>
                         <span class="tech-tag">LLMOps</span>
                         <span class="tech-tag">Enterprise RAG</span>
+                        <span class="tech-tag">Vector Databases (Milvus)</span>
+                        <span class="tech-tag">AI Readiness Assessment</span>
                     </div>
                 </div>
             </div>
@@ -1841,6 +1843,52 @@
 </section>
 
 <!-- ============================
+     PUBLICATIONS
+     ============================ -->
+<section class="publications" id="publications">
+    <div class="section-inner">
+        <div class="section-label">Writing</div>
+        <h2 class="section-title">Publications</h2>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fas fa-newspaper"></i></div>
+            <div class="pub-info">
+                <h3>AI Agents for Modernization: Unlocking Trillions in Stalled Tech Work</h3>
+                <p>Co-authored for Cognizant Insights, this piece argues that AI agents — distinct from simple coding assistants — fundamentally transform enterprise modernization economics by slashing discovery phase costs. Where documentation gaps and expert knowledge silos once stalled programs, these systems make previously unaffordable investigations routine. Addresses the primary barrier blocking trillions of dollars in deferred technology modernization work.</p>
+                <a href="https://www.cognizant.com/us/en/insights/insights-blog/ai-agents-for-modernization-discovery-phase" class="pub-link" target="_blank" rel="noopener">Read on Cognizant Insights <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fab fa-medium"></i></div>
+            <div class="pub-info">
+                <h3>The 10X Myth</h3>
+                <p>Challenges the widely-cited claim that AI coding assistants deliver 10X productivity gains. Controlled studies show real improvements of 1.2X–2X at best, yet developers consistently overestimate their own output — with one study finding people perceived themselves 24% faster while actually working 19% slower. Argues that AI speeds up code writing but leaves the true delivery bottlenecks — requirements clarity, architecture, and testing — completely untouched.</p>
+                <a href="https://medium.com/@anishthanaseelan/the-10x-myth-3e536d151347" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fab fa-medium"></i></div>
+            <div class="pub-info">
+                <h3>The Architect's New Job</h3>
+                <p>When agents write the code, the only thing that matters is how well you broke the problem down.
+                   Explores how AI-driven development shifts the architect's role from writing code to decomposing
+                   problems — and why that makes the job harder, not easier.</p>
+                <a href="https://medium.com/@anishthanaseelan/the-architects-new-job-398eaff2f461" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="publication-card reveal">
+            <div class="pub-icon"><i class="fab fa-medium"></i></div>
+            <div class="pub-info">
+                <h3>Creating Winning Solutions: Bringing Stakeholders Together with CPS</h3>
+                <p>An approach to pre-development discovery using the Osborn Creative Problem Solving technique.
+                   Covers stakeholder engagement, AS-IS discovery, ideation, cost-benefit convolution,
+                   and functional flow identification to maximise ROI confidence and create win-win outcomes.</p>
+                <a href="https://medium.com/@anishthanaseelan/an-approach-to-pre-development-discovery-using-cps-9a9c9c54de29" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
      WORK EXPERIENCE
      ============================ -->
 <section class="experience" id="experience">
@@ -1876,6 +1924,8 @@
                                 Architected the IDDI integration layer — the umbilical cord between ASDA Future and
                                 ASDA Legacy — enabling controlled decoupling during the transition. Personally
                                 designed the Transition Control Framework governing the end-to-end separation programme.
+                                The same governance and migration-control discipline underpins safely deploying AI across
+                                large-scale, high-stakes enterprise estates.
                             </div>
                             <div class="timeline-highlight">
                                 <strong>In-Market Node (IMN)</strong> — SME, Technology Architect, and Delivery Manager
@@ -1891,6 +1941,7 @@
                                 <strong>Pop-up e-Commerce Warehouses</strong> — Strategised and delivered WMS for
                                 40+ pop-up e-Commerce warehouses under 3 months, coordinating a 20-member global
                                 team to meet Walmart's rapid fulfilment expansion targets.
+                                The same rapid, controlled delivery discipline governs production AI rollout at scale.
                             </div>
                         </div>
                     </div>
@@ -2025,48 +2076,6 @@
 </section>
 
 <!-- ============================
-     WORKS / PROJECTS
-     ============================ -->
-<section class="projects" id="projects">
-    <div class="section-inner">
-        <div class="section-label">Open Source</div>
-        <h2 class="section-title">Passion Projects</h2>
-        <p class="section-subtitle">Personal open-source projects — built to explore ideas, sharpen skills, and contribute to the community.</p>
-        <div class="projects-grid">
-
-            <div class="project-card reveal">
-                <h3>Carrier Integration Platform (CIP)</h3>
-                <p>Cloud-ready B2B integration platform built on SOA, automating transactions with carriers like UPS, FedEx, and USPS. Single-handedly designed and delivered with a lean team.</p>
-                <div class="project-tech">Java · JavaScript · CSS · HTML · XSLT</div>
-                <a href="https://github.com/anishthanaseelan/cip" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card reveal">
-                <h3>Automated Quality Compliance (AQCV)</h3>
-                <p>Platform-agnostic static code quality analysis and reporting tool for ESQL/C languages, designed for easy plug-and-play of compliance rules, monitoring and enforcement.</p>
-                <div class="project-tech">Perl · Tk/Perl · HTML</div>
-                <a href="https://github.com/anishthanaseelan/AQCV" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card reveal">
-                <h3>Coding Challenges</h3>
-                <p>Solutions to challenges from Advent of Code and Coderbyte, implemented across multiple languages.</p>
-                <div class="project-tech">Java · JavaScript · Perl</div>
-                <a href="https://github.com/anishthanaseelan/coding_challenges" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-            <div class="project-card reveal">
-                <h3>Portfolio Website</h3>
-                <p>This responsive single-page portfolio — designed and built from scratch with dark mode support, scroll-reveal animations, and mobile-first layout. Developed with AI coding assistance (Claude) to demonstrate modern human–AI collaborative development.</p>
-                <div class="project-tech">HTML · CSS · JavaScript · Claude AI</div>
-                <a href="https://github.com/anishthanaseelan/anishthanaseelan.github.io" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ============================
      CERTIFICATIONS
      ============================ -->
 <section class="certifications" id="certifications">
@@ -2178,47 +2187,43 @@
 </section>
 
 <!-- ============================
-     PUBLICATIONS
+     WORKS / PROJECTS
      ============================ -->
-<section class="publications" id="publications">
+<section class="projects" id="projects">
     <div class="section-inner">
-        <div class="section-label">Writing</div>
-        <h2 class="section-title">Publications</h2>
-        <div class="publication-card reveal">
-            <div class="pub-icon"><i class="fas fa-newspaper"></i></div>
-            <div class="pub-info">
-                <h3>AI Agents for Modernization: Unlocking Trillions in Stalled Tech Work</h3>
-                <p>Co-authored for Cognizant Insights, this piece argues that AI agents — distinct from simple coding assistants — fundamentally transform enterprise modernization economics by slashing discovery phase costs. Where documentation gaps and expert knowledge silos once stalled programs, these systems make previously unaffordable investigations routine. Addresses the primary barrier blocking trillions of dollars in deferred technology modernization work.</p>
-                <a href="https://www.cognizant.com/us/en/insights/insights-blog/ai-agents-for-modernization-discovery-phase" class="pub-link" target="_blank" rel="noopener">Read on Cognizant Insights <i class="fas fa-arrow-right"></i></a>
+        <div class="section-label">Open Source</div>
+        <h2 class="section-title">Passion Projects</h2>
+        <p class="section-subtitle">Personal open-source projects — built to explore ideas, sharpen skills, and contribute to the community.</p>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <h3>Carrier Integration Platform (CIP)</h3>
+                <p>Cloud-ready B2B integration platform built on SOA, automating transactions with carriers like UPS, FedEx, and USPS. Single-handedly designed and delivered with a lean team.</p>
+                <div class="project-tech">Java · JavaScript · CSS · HTML · XSLT</div>
+                <a href="https://github.com/anishthanaseelan/cip" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
-        <div class="publication-card reveal">
-            <div class="pub-icon"><i class="fab fa-medium"></i></div>
-            <div class="pub-info">
-                <h3>The 10X Myth</h3>
-                <p>Challenges the widely-cited claim that AI coding assistants deliver 10X productivity gains. Controlled studies show real improvements of 1.2X–2X at best, yet developers consistently overestimate their own output — with one study finding people perceived themselves 24% faster while actually working 19% slower. Argues that AI speeds up code writing but leaves the true delivery bottlenecks — requirements clarity, architecture, and testing — completely untouched.</p>
-                <a href="https://medium.com/@anishthanaseelan/the-10x-myth-3e536d151347" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+
+            <div class="project-card reveal">
+                <h3>Automated Quality Compliance (AQCV)</h3>
+                <p>Platform-agnostic static code quality analysis and reporting tool for ESQL/C languages, designed for easy plug-and-play of compliance rules, monitoring and enforcement.</p>
+                <div class="project-tech">Perl · Tk/Perl · HTML</div>
+                <a href="https://github.com/anishthanaseelan/AQCV" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
-        <div class="publication-card reveal">
-            <div class="pub-icon"><i class="fab fa-medium"></i></div>
-            <div class="pub-info">
-                <h3>The Architect's New Job</h3>
-                <p>When agents write the code, the only thing that matters is how well you broke the problem down.
-                   Explores how AI-driven development shifts the architect's role from writing code to decomposing
-                   problems — and why that makes the job harder, not easier.</p>
-                <a href="https://medium.com/@anishthanaseelan/the-architects-new-job-398eaff2f461" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+
+            <div class="project-card reveal">
+                <h3>Coding Challenges</h3>
+                <p>Solutions to challenges from Advent of Code and Coderbyte, implemented across multiple languages.</p>
+                <div class="project-tech">Java · JavaScript · Perl</div>
+                <a href="https://github.com/anishthanaseelan/coding_challenges" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
-        <div class="publication-card reveal">
-            <div class="pub-icon"><i class="fab fa-medium"></i></div>
-            <div class="pub-info">
-                <h3>Creating Winning Solutions: Bringing Stakeholders Together with CPS</h3>
-                <p>An approach to pre-development discovery using the Osborn Creative Problem Solving technique.
-                   Covers stakeholder engagement, AS-IS discovery, ideation, cost-benefit convolution,
-                   and functional flow identification to maximise ROI confidence and create win-win outcomes.</p>
-                <a href="https://medium.com/@anishthanaseelan/an-approach-to-pre-development-discovery-using-cps-9a9c9c54de29" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
+
+            <div class="project-card reveal">
+                <h3>Portfolio Website</h3>
+                <p>This responsive single-page portfolio — designed and built from scratch with dark mode support, scroll-reveal animations, and mobile-first layout. Developed with AI coding assistance (Claude) to demonstrate modern human–AI collaborative development.</p>
+                <div class="project-tech">HTML · CSS · JavaScript · Claude AI</div>
+                <a href="https://github.com/anishthanaseelan/anishthanaseelan.github.io" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
+
         </div>
     </div>
 </section>
