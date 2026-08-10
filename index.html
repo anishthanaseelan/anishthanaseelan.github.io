@@ -818,6 +818,8 @@
         .cert-icon.oracle  { background: #fce4ec; color: #c62828; }
         .cert-icon.sap     { background: #e3f2fd; color: #1565c0; }
         .cert-icon.anthropic { background: #faf0e6; color: #d97706; }
+        .cert-icon.bcs     { background: #eef2ff; color: #4338ca; }
+        .cert-icon.ieee    { background: #e6f2f8; color: #00629b; }
 
         .cert-info h4 {
             font-size: 0.88rem;
@@ -1824,6 +1826,11 @@
                 <div class="expertise-icon"><i class="fas fa-users"></i></div>
                 <h3>Stakeholder Management</h3>
                 <p>15+ years of client-facing experience across multiple continents. Practitioner of Creative Problem Solving (CPS) to engage stakeholders and create win-win solutions with transparent cost-benefit analysis.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">CPS</span>
+                    <span class="tech-tag">Cost-Benefit Analysis</span>
+                    <span class="tech-tag">Executive Communication</span>
+                </div>
             </div>
 
             <div class="expertise-card reveal">
@@ -1916,16 +1923,35 @@
                         <div class="timeline-subphase-header">United Kingdom <span>· Sep 2016 — Present</span></div>
                         <div class="timeline-highlights">
                             <div class="timeline-highlight">
+                                <strong>Gen AI Research Agent (2026–present)</strong> — Designed and built a multi-agent research
+                                system that democratises knowledge on a sun-setting, 20-year-old legacy WMS with a shrinking SME
+                                pool: an orchestrator decomposes each question, task-specific worker agents investigate with
+                                peer-review co-workers, grounding gates fact-check outputs to cut hallucination, and a
+                                synthesis step assembles traceable answers from code, behavioural relationships, and
+                                documentation. New-to-platform testers self-serve their troubleshooting instead of queueing
+                                on a three-person development team, returning that capacity to delivery. Enterprise-scale
+                                extension to further products, teams, and automated-resolution use cases is under way.
+                            </div>
+                            <div class="timeline-highlight">
                                 <strong>ASDA Divestiture</strong> — Enterprise Architect for the sell-side architectural separation of the
-                                &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in history.
-                                Orchestrated the surgical removal of a &pound;20bn revenue entity from a deeply integrated global
-                                ecosystem. Led a 300-person technology team, responsible for technology governance, IP protection,
-                                Technology Vision &amp; Policies, and system/data migration strategy for transition states.
-                                Architected the IDDI integration layer — the umbilical cord between ASDA Future and
-                                ASDA Legacy — enabling controlled decoupling during the transition. Personally
-                                designed the Transition Control Framework governing the end-to-end separation programme.
-                                The same governance and migration-control discipline underpins safely deploying AI across
-                                large-scale, high-stakes enterprise estates.
+                                &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in the UK.
+                                The programme ran in two phases: two years of business integration, then three of separation
+                                through integration, detaching an entity with close to &pound;25bn in annual revenue and around
+                                1,200 applications and technologies from a deeply integrated global ecosystem while trading
+                                continued. Designed the technology operating model — vision, principles, and ways of
+                                working — that a 300-person, ten-tower technology organisation worked within, and built the
+                                technical and process guard-rails that pulled multi-discipline, multi-vendor teams to a
+                                single vision. Accountable for technology governance, IP protection, and operational
+                                excellence across the separated estate. Architected the IDDI integration layer — the
+                                umbilical cord between ASDA Future and ASDA Legacy — standardising the divestiture on three
+                                integration patterns and delivering a Tier 0 platform that held five-nines availability
+                                across 3,000+ active pipelines and close to a petabyte of data, with pipeline turnaround cut
+                                from weeks to minutes. Conceived the In-a-Box approach packaging five business capabilities
+                                so the divested business was never held up, and created IP Archival — a first for Walmart —
+                                with buy-in from the International VP and Chief Architect. Personally designed the Transition
+                                Control Framework governing the end-to-end separation programme. The same governance and
+                                migration-control discipline underpins safely deploying AI across large-scale, high-stakes
+                                enterprise estates.
                             </div>
                             <div class="timeline-highlight">
                                 <strong>In-Market Node (IMN)</strong> — SME, Technology Architect, and Delivery Manager
@@ -1936,6 +1962,11 @@
                                 <strong>ASDA-George Clothing</strong> — Solutions Architect and WMS SME. Led a team
                                 of 15 developers to design, build, and pilot the warehouse management solution for
                                 ASDA's Clothing Depots, including the WCS integration with Dematic's automated sortation system.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>AGV–WMS Integration (2018–2020)</strong> — Led solution architecture bringing
+                                automated guided vehicles into ASDA's WMS estate, owning the design decisions and
+                                trade-offs across cost, performance, and resilience.
                             </div>
                             <div class="timeline-highlight">
                                 <strong>Pop-up e-Commerce Warehouses</strong> — Strategised and delivered WMS for
@@ -2038,7 +2069,13 @@
             <div class="achievement-card reveal">
                 <div class="achievement-metric">300</div>
                 <h3>Divestiture Technology Governance</h3>
-                <p>Led a 300-person technology team through the &pound;6.8bn ASDA-Walmart separation, establishing technology governance frameworks, IP protection protocols, and system migration strategies for one of the UK's largest retail carve-outs.</p>
+                <p>Designed the operating model and guard-rails for the 300-person tower organisation delivering the &pound;6.8bn ASDA–Walmart separation — technology governance, IP protection (including the first-of-its-kind IP Archival), and migration strategy for one of the UK's largest retail carve-outs.</p>
+            </div>
+
+            <div class="achievement-card reveal">
+                <div class="achievement-metric">99.999%</div>
+                <h3>Tier 0 Integration Platform</h3>
+                <p>Architected the divestiture's bespoke data-integration platform on three standardised patterns — five-nines availability as a Tier 0 service, 3,000+ active pipelines, close to a petabyte of data, and pipeline turnaround cut from weeks to minutes — serving both data migration and integration on one platform.</p>
             </div>
 
             <div class="achievement-card reveal">
@@ -2066,9 +2103,9 @@
             </div>
 
             <div class="achievement-card reveal">
-                <div class="achievement-metric">600%</div>
+                <div class="achievement-metric">6×</div>
                 <h3>Releasewave Re-engineering</h3>
-                <p>Re-engineered the Releasewave batch subsystem, reducing codebase by 75%, regression effort by 60%, and runtime by 600%. Enabled processing of one million cases in 20 minutes, unlocking GLS for Walmart's US Import DCs.</p>
+                <p>Re-engineered the Releasewave batch subsystem — 75% less code, 60% less regression effort, and a six-fold runtime improvement — enabling one million cases in 20 minutes and unlocking GLS for Walmart's US Import DCs.</p>
             </div>
 
         </div>
@@ -2114,7 +2151,7 @@
                 <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
                 <div class="cert-info">
                     <h4>Azure Solutions Architect Expert</h4>
-                    <p>Microsoft · Issued Nov 2024 · Expires Nov 2026</p>
+                    <p>Microsoft · Issued Nov 2024 · Renewed 2026 · Expires Nov 2027 · <a href="https://learn.microsoft.com/api/credentials/share/en-us/anishkaspaar/8C9CCEAEFA750022?sharingId=74E4E6D6FDED2D6E" target="_blank" rel="noopener">Verify</a></p>
                 </div>
             </div>
 
@@ -2154,7 +2191,7 @@
                 <div class="cert-icon oracle"><i class="fas fa-brain"></i></div>
                 <div class="cert-info">
                     <h4>OCI 2024 Generative AI Professional</h4>
-                    <p>Oracle · Issued Jul 2024 · Expires Jul 2026</p>
+                    <p>Oracle · Issued Jul 2024</p>
                 </div>
             </div>
 
@@ -2162,7 +2199,7 @@
                 <div class="cert-icon togaf"><i class="fas fa-sitemap"></i></div>
                 <div class="cert-info">
                     <h4>TOGAF&reg; 9 Certified</h4>
-                    <p>The Open Group · Issued Apr 2014</p>
+                    <p>The Open Group · Issued Apr 2014 · <a href="https://www.credly.com/badges/f46cf4ed-31f9-4d00-99a9-cd8a931ccf19/linked_in_profile" target="_blank" rel="noopener">Verify</a></p>
                 </div>
             </div>
 
@@ -2179,6 +2216,27 @@
                 <div class="cert-info">
                     <h4>SAP S/4HANA — Logistics</h4>
                     <p>SAP · Issued Jun 2022</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h3 class="certs-subheading">Professional Memberships</h3>
+        <div class="certs-grid">
+
+            <div class="cert-card reveal">
+                <div class="cert-icon bcs"><i class="fas fa-award"></i></div>
+                <div class="cert-info">
+                    <h4>MBCS — Professional Member</h4>
+                    <p>BCS, The Chartered Institute for IT · 2026</p>
+                </div>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon ieee"><i class="fas fa-bolt"></i></div>
+                <div class="cert-info">
+                    <h4>Member, IEEE &amp; IEEE Computer Society</h4>
+                    <p>IEEE · 2026</p>
                 </div>
             </div>
 
