@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>Anish Thanaseelan Kaspaar — Enterprise AI Transformation Architect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and LLMOps, backed by TOGAF & Azure Solutions Architect Expert certification.">
+    <meta name="description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and MCP, backed by TOGAF, Azure Solutions Architect Expert and Claude Certified Architect certifications.">
     <meta name="author" content="Anish Thanaseelan Kaspaar">
-    <meta name="keywords" content="Solution Architect, Enterprise Architect, Supply Chain, Logistics, WMS, TOGAF, Azure, Retail, Walmart, ASDA, Cognizant, AI Transformation Architect, LLMOps, Enterprise RAG, Vector Databases, Azure AI Search, Target Operating Model, AI Readiness Assessment">
+    <meta name="keywords" content="Solution Architect, Enterprise Architect, Supply Chain, Logistics, WMS, TOGAF, Azure, Retail, Walmart, ASDA, Cognizant, AI Transformation Architect, MCP, AI Governance, Claude Certified Architect, Enterprise RAG, Vector Databases, Azure AI Search, Target Operating Model, AI Readiness Assessment">
     <link rel="canonical" href="https://anishthanaseelan.github.io/">
 
     <!-- Open Graph (LinkedIn, Facebook, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Anish Thanaseelan Kaspaar — Enterprise AI Transformation Architect">
-    <meta property="og:description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and LLMOps, backed by TOGAF & Azure Solutions Architect Expert certification.">
+    <meta property="og:description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and MCP, backed by TOGAF, Azure Solutions Architect Expert and Claude Certified Architect certifications.">
     <meta property="og:url" content="https://anishthanaseelan.github.io/">
     <meta property="og:image" content="https://anishthanaseelan.github.io/profile_picture.jpg">
     <meta property="og:site_name" content="Anish Thanaseelan Kaspaar">
@@ -20,7 +20,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Anish Thanaseelan Kaspaar — Enterprise AI Transformation Architect">
-    <meta name="twitter:description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and LLMOps, backed by TOGAF & Azure Solutions Architect Expert certification.">
+    <meta name="twitter:description" content="Enterprise AI Transformation Architect with 20+ years in Retail, Supply Chain & Logistics. Production agentic AI, enterprise RAG and MCP, backed by TOGAF, Azure Solutions Architect Expert and Claude Certified Architect certifications.">
     <meta name="twitter:image" content="https://anishthanaseelan.github.io/profile_picture.jpg">
 
     <!-- Structured Data (JSON-LD) -->
@@ -1380,8 +1380,6 @@
             /* --- Work Experience --- */
             .experience {
                 background: #ffffff !important;
-                break-before: page;
-                page-break-before: always;
             }
 
             .timeline {
@@ -1421,13 +1419,18 @@
             }
 
             .timeline-subphases {
+                display: block !important;
                 margin-top: 8pt !important;
-                gap: 10pt !important;
             }
 
             .timeline-subphase {
+                display: block !important;
                 break-inside: avoid;
                 page-break-inside: avoid;
+            }
+
+            .timeline-subphase + .timeline-subphase {
+                margin-top: 10pt !important;
             }
 
             .timeline-subphase-header {
@@ -1445,20 +1448,32 @@
             }
 
             .timeline-highlights {
+                display: block !important;
                 margin-top: 4pt !important;
-                gap: 3pt !important;
             }
 
             .timeline-highlight {
+                display: list-item !important;
+                list-style-type: disc;
+                list-style-position: inside;
+                position: static !important;
                 font-size: 8.5pt;
-                padding-left: 12pt !important;
+                padding-left: 0 !important;
                 line-height: 1.5;
             }
 
+            .timeline-highlight + .timeline-highlight {
+                margin-top: 3pt !important;
+            }
+
             .timeline-highlight::before {
-                content: '\2022' !important;
-                font-size: 8pt;
+                content: none !important;
+                display: none !important;
+            }
+
+            .timeline-highlight::marker {
                 color: #6ab04c;
+                font-size: 8pt;
             }
 
             .timeline-highlight strong {
@@ -1677,7 +1692,7 @@
 
 <div class="print-header" aria-hidden="true">
     <h1 class="print-name">Anish Thanaseelan Kaspaar</h1>
-    <p class="print-role">Enterprise AI Transformation Architect | Retail &amp; Supply Chain | TOGAF &amp; Azure Certified</p>
+    <p class="print-role">Enterprise AI Transformation Architect | Retail &amp; Supply Chain | TOGAF, Azure &amp; Claude Architect Certified</p>
     <div class="print-contact">
         <span>linkedin.com/in/anish-kaspaar</span>
         <span class="print-separator">|</span>
@@ -1695,14 +1710,14 @@
         <div class="intro-text">
             <span class="intro-greeting">Hello, I'm</span>
             <h1 class="intro-name">Anish Thanaseelan<br>Kaspaar</h1>
-            <p class="intro-role">Enterprise AI Transformation Architect | Retail &amp; Supply Chain | TOGAF &amp; Azure Certified</p>
+            <p class="intro-role">Enterprise AI Transformation Architect | Retail &amp; Supply Chain | TOGAF, Azure &amp; Claude Architect Certified</p>
             <p class="intro-summary">
                 Enterprise AI Transformation Architect with 20+ years designing and governing large-scale systems across
                 retail, supply chain, and logistics. I pair deep domain depth — from Walmart-scale warehouse and fulfilment
                 platforms to the £6.8bn ASDA carve-out — with hands-on delivery of production agentic AI, enterprise RAG,
-                and LLMOps. I bring the systems thinking and governance that safe AI adoption demands in large-scale,
+                and MCP-based tool integration. I bring the systems thinking and governance that safe AI adoption demands in large-scale,
                 high-stakes environments, translating strategy into target operating models, AI readiness assessments,
-                and defensible architecture. TOGAF and Azure Solutions Architect Expert certified, giving me the framework
+                and defensible architecture. TOGAF, Azure Solutions Architect Expert and Claude Certified Architect certified, giving me the framework
                 to move fast on AI adoption without breaking enterprise governance.
             </p>
             <div class="intro-cta">
@@ -1725,11 +1740,11 @@
                     <div class="intro-stat-label">Years Experience</div>
                 </div>
                 <div>
-                    <div class="intro-stat-num">10</div>
+                    <div class="intro-stat-num">7</div>
                     <div class="intro-stat-label">Certifications</div>
                 </div>
                 <div>
-                    <div class="intro-stat-num">5+</div>
+                    <div class="intro-stat-num">7</div>
                     <div class="intro-stat-label">Markets Served</div>
                 </div>
             </div>
@@ -1757,13 +1772,14 @@
                 <div class="expertise-icon"><i class="fas fa-robot"></i></div>
                 <div class="feat-body">
                     <h3>Agentic AI</h3>
-                    <p>Practitioner-level experience across AI coding assistants, LLMs, and agentic systems — grounded in direct production deployments. Has run supervised agentic research workflows over six million lines of multi-language legacy code, and conducted unsupervised greenfield development using multi-model AI assistants. Assessed security, privacy, and reliability implications of agentic AI in enterprise settings, covering AI-generated code vulnerabilities and OWASP LLM threat taxonomies. Published multiple articles analysing the empirical research landscape around AI productivity and the evolving role of the architect in the age of AI.</p>
+                    <p>Practitioner-level experience across AI coding assistants, LLMs, and agentic systems — grounded in direct production deployments. Ran supervised agentic research workflows over six million lines of multi-language legacy code, and conducted unsupervised greenfield development using multi-model AI assistants. Assessed security, privacy, and reliability implications of agentic AI in enterprise settings, covering AI-generated code vulnerabilities and OWASP LLM threat taxonomies. Published multiple articles analysing the empirical research landscape around AI productivity and the evolving role of the architect in the age of AI.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Anthropic Models &amp; Tools</span>
                         <span class="tech-tag">Agentic Workflows</span>
                         <span class="tech-tag">OWASP LLM</span>
                         <span class="tech-tag">AI Thought Leadership</span>
-                        <span class="tech-tag">LLMOps</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">AI Governance</span>
                         <span class="tech-tag">Enterprise RAG</span>
                         <span class="tech-tag">Vector Databases (Milvus)</span>
                         <span class="tech-tag">AI Readiness Assessment</span>
@@ -1786,7 +1802,7 @@
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-warehouse"></i></div>
                 <h3>Warehouse Management Systems</h3>
-                <p>18+ years as a WMS SME. Designed solutions for Hubs, Spokes, Food, General Merchandise, Apparel, e-Commerce, and Home Shopping operations across 5+ unique markets and continents.</p>
+                <p>18+ years as a WMS SME. Designed solutions for Hubs, Spokes, Food, General Merchandise, Apparel, e-Commerce, and Home Shopping operations across 7 markets on three continents.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">GLS</span>
                     <span class="tech-tag">WCS</span>
@@ -1798,7 +1814,7 @@
             <div class="expertise-card reveal">
                 <div class="expertise-icon"><i class="fas fa-code"></i></div>
                 <h3>Application Development</h3>
-                <p>20+ years of full-stack development across Retail and Healthcare domains. Expertise in architecture and design of scalable web and backend applications in multiple tech stacks.</p>
+                <p>20+ years of software development across Retail and Healthcare domains. Expertise in architecture and design of scalable web and backend applications in multiple tech stacks.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Java</span>
                     <span class="tech-tag">JavaScript</span>
@@ -1868,7 +1884,7 @@
             <div class="pub-icon"><i class="fab fa-medium"></i></div>
             <div class="pub-info">
                 <h3>The 10X Myth</h3>
-                <p>Challenges the widely-cited claim that AI coding assistants deliver 10X productivity gains. Controlled studies show real improvements of 1.2X–2X at best, yet developers consistently overestimate their own output — with one study finding people perceived themselves 24% faster while actually working 19% slower. Argues that AI speeds up code writing but leaves the true delivery bottlenecks — requirements clarity, architecture, and testing — completely untouched.</p>
+                <p>Challenges the widely-cited claim that AI coding assistants deliver 10X productivity gains. Controlled studies show real improvements of 1.2X–2X at best, yet developers consistently overestimate their own output — with one study finding developers expected a 24% speed-up and still believed afterwards they had been about 20% faster, while actually working 19% slower. Argues that AI speeds up code writing but leaves the true delivery bottlenecks — requirements clarity, architecture, and testing — completely untouched.</p>
                 <a href="https://medium.com/@anishthanaseelan/the-10x-myth-3e536d151347" class="pub-link" target="_blank" rel="noopener">Read on Medium <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
@@ -1928,15 +1944,17 @@
                                 pool: an orchestrator decomposes each question, task-specific worker agents investigate with
                                 peer-review co-workers, grounding gates fact-check outputs to cut hallucination, and a
                                 synthesis step assembles traceable answers from code, behavioural relationships, and
-                                documentation. New-to-platform testers self-serve their troubleshooting instead of queueing
-                                on a three-person development team, returning that capacity to delivery. Enterprise-scale
-                                extension to further products, teams, and automated-resolution use cases is under way.
+                                documentation. Built on retrieval-augmented generation (RAG) and MCP-based tool integration.
+                                Led the AI readiness assessment and AI governance for the solution. New-to-platform
+                                testers self-serve their troubleshooting instead of queueing on a three-person development
+                                team, returning that capacity to delivery. Enterprise-scale extension to further products,
+                                teams, and automated-resolution use cases is under way.
                             </div>
                             <div class="timeline-highlight">
-                                <strong>ASDA Divestiture</strong> — Enterprise Architect for the sell-side architectural separation of the
+                                <strong>ASDA Divestiture (2021–2026)</strong> — Enterprise Architect for the sell-side architectural separation of the
                                 &pound;6.8bn divestiture of Asda from Walmart — one of the largest retail carve-outs in the UK.
-                                The programme ran in two phases: two years of business integration, then three of separation
-                                through integration, detaching an entity with close to &pound;25bn in annual revenue and around
+                                The programme ran in two phases: two years of business integration, then three years of
+                                separation delivered through an integration-led approach, detaching an entity with close to &pound;25bn in annual revenue and around
                                 1,200 applications and technologies from a deeply integrated global ecosystem while trading
                                 continued. Designed the technology operating model — vision, principles, and ways of
                                 working — that a 300-person, ten-tower technology organisation worked within, and built the
@@ -1954,14 +1972,9 @@
                                 enterprise estates.
                             </div>
                             <div class="timeline-highlight">
-                                <strong>In-Market Node (IMN)</strong> — SME, Technology Architect, and Delivery Manager
-                                for Order Processing. Mentored a new team to deliver this short-term POC, and developed a
-                                new data model representation to enable parallel development of dependent modules.
-                            </div>
-                            <div class="timeline-highlight">
-                                <strong>ASDA-George Clothing</strong> — Solutions Architect and WMS SME. Led a team
-                                of 15 developers to design, build, and pilot the warehouse management solution for
-                                ASDA's Clothing Depots, including the WCS integration with Dematic's automated sortation system.
+                                <strong>Pop-up e-Commerce Warehouses (2020–2021)</strong> — Strategised and delivered WMS for
+                                40+ pop-up e-Commerce warehouses under 3 months, coordinating a 20-member global
+                                team to meet Walmart's rapid fulfilment expansion targets.
                             </div>
                             <div class="timeline-highlight">
                                 <strong>AGV–WMS Integration (2018–2020)</strong> — Led solution architecture bringing
@@ -1969,10 +1982,9 @@
                                 trade-offs across cost, performance, and resilience.
                             </div>
                             <div class="timeline-highlight">
-                                <strong>Pop-up e-Commerce Warehouses</strong> — Strategised and delivered WMS for
-                                40+ pop-up e-Commerce warehouses under 3 months, coordinating a 20-member global
-                                team to meet Walmart's rapid fulfilment expansion targets.
-                                The same rapid, controlled delivery discipline governs production AI rollout at scale.
+                                <strong>ASDA-George Clothing (2016–2018)</strong> — Solutions Architect and WMS SME. Led a team
+                                of 15 developers to design, build, and pilot the warehouse management solution for
+                                ASDA's Clothing Depots, including the WCS integration with Dematic's automated sortation system.
                             </div>
                         </div>
                     </div>
@@ -1982,12 +1994,17 @@
                         <div class="timeline-subphase-header">United States <span>· Jul 2011 — Sep 2016 · Bentonville, AR</span></div>
                         <div class="timeline-highlights">
                             <div class="timeline-highlight">
-                                <strong>GLS NextGen</strong> — WMS SME and Integration Specialist.
+                                <strong>In-Market Node (IMN) (2015)</strong> — SME, Technology Architect, and Delivery Manager
+                                for Order Processing. Mentored a new team to deliver this short-term POC, and developed a
+                                new data model representation to enable parallel development of dependent modules.
+                            </div>
+                            <div class="timeline-highlight">
+                                <strong>GLS NextGen (2014–2015)</strong> — WMS SME and Integration Specialist.
                                 Led the monolith-to-microservices migration, mentoring the team in adopting TDD while
                                 maintaining delivery to market.
                             </div>
                             <div class="timeline-highlight">
-                                <strong>e-Commerce Distribution Centre</strong> — Application Architect for Walmart's
+                                <strong>e-Commerce Distribution Centre (2011–2014)</strong> — Application Architect for Walmart's
                                 e-Commerce DC fulfilment stack. Owned the solution architecture for Order Processing,
                                 Wave Planning, and Cartonisation subsystems — designing order batching strategies, optimal
                                 carton selection algorithms, and wave grouping logic that scaled across multiple DC sites.
@@ -1995,7 +2012,7 @@
                                 integration with UPS, FedEx, and USPS.
                             </div>
                             <div class="timeline-highlight">
-                                <strong>Imports Distribution Centres</strong> — Designed solution architecture for
+                                <strong>Imports Distribution Centres (2011–2012)</strong> — Designed solution architecture for
                                 Walmart's Imports DC warehouse management sub-solutions. Created base development
                                 frameworks, test automation suites, and code quality protocols adopted across
                                 multiple delivery streams.
@@ -2008,7 +2025,7 @@
                         <div class="timeline-subphase-header">India <span>· May 2008 — Jul 2011 · Chennai</span></div>
                         <div class="timeline-highlights">
                             <div class="timeline-highlight">
-                                <strong>Imports DC — Core Systems</strong> — Lead Designer and Developer for
+                                <strong>Imports DC — Core Systems (2008–2011)</strong> — Lead Designer and Developer for
                                 business-critical Imports DC subsystems including Order Management, Order Filling,
                                 and warehouse automation interfaces (FKI BOSS integration). Built foundational GLS
                                 frameworks — batch processing, label printing, alert management — that underpinned
@@ -2017,7 +2034,7 @@
                             <div class="timeline-highlight">
                                 <strong>Capability Building</strong> — Mentored 30+ associates through structured
                                 KT sessions and classroom training; developed internal tooling including static and
-                                dynamic code analysers for eSQL/C.
+                                dynamic code analysers for ESQL/C.
                             </div>
                         </div>
                     </div>
@@ -2069,13 +2086,13 @@
             <div class="achievement-card reveal">
                 <div class="achievement-metric">300</div>
                 <h3>Divestiture Technology Governance</h3>
-                <p>Designed the operating model and guard-rails for the 300-person tower organisation delivering the &pound;6.8bn ASDA–Walmart separation — technology governance, IP protection (including the first-of-its-kind IP Archival), and migration strategy for one of the UK's largest retail carve-outs.</p>
+                <p>Designed the operating model and guard-rails for the 300-person, ten-tower organisation behind the &pound;6.8bn ASDA–Walmart separation, including the first-of-its-kind IP Archival.</p>
             </div>
 
             <div class="achievement-card reveal">
                 <div class="achievement-metric">99.999%</div>
                 <h3>Tier 0 Integration Platform</h3>
-                <p>Architected the divestiture's bespoke data-integration platform on three standardised patterns — five-nines availability as a Tier 0 service, 3,000+ active pipelines, close to a petabyte of data, and pipeline turnaround cut from weeks to minutes — serving both data migration and integration on one platform.</p>
+                <p>Five-nines Tier 0 platform serving both data migration and integration: 3,000+ active pipelines, close to a petabyte of data, and pipeline turnaround cut from weeks to minutes.</p>
             </div>
 
             <div class="achievement-card reveal">
@@ -2093,19 +2110,7 @@
             <div class="achievement-card reveal">
                 <div class="achievement-metric">CPS</div>
                 <h3>Win-Win Stakeholder Solutions</h3>
-                <p>Used the Osborn Creative Problem Solving technique for the GDS elimination initiative, creating a solution that satisfied all stakeholders and ensured smooth migration to GLS.</p>
-            </div>
-
-            <div class="achievement-card reveal">
-                <div class="achievement-metric">35%</div>
-                <h3>Performance Tracking &amp; Anomaly Detection</h3>
-                <p>Designed a data-driven performance tracking and anomaly detection approach for the Releasewave subsystem, reducing batch runtime by 35% and helping Walmart sustain its 1-Hour delivery promise.</p>
-            </div>
-
-            <div class="achievement-card reveal">
-                <div class="achievement-metric">6×</div>
-                <h3>Releasewave Re-engineering</h3>
-                <p>Re-engineered the Releasewave batch subsystem — 75% less code, 60% less regression effort, and a six-fold runtime improvement — enabling one million cases in 20 minutes and unlocking GLS for Walmart's US Import DCs.</p>
+                <p>Used the Osborn Creative Problem Solving technique for the GDS (legacy WMS) elimination initiative, creating a solution that satisfied all stakeholders and ensured smooth migration to GLS.</p>
             </div>
 
         </div>
@@ -2142,8 +2147,8 @@
             <div class="cert-card reveal">
                 <div class="cert-icon anthropic"><i class="fas fa-robot"></i></div>
                 <div class="cert-info">
-                    <h4>Claude Certified Architect &mdash; Foundations</h4>
-                    <p>Anthropic · Issued Mar 2026 · <a href="https://verify.skilljar.com/c/u9ess5j33kej" target="_blank" rel="noopener">Verify</a></p>
+                    <h4>Claude Certified Architect &mdash; Professional</h4>
+                    <p>Anthropic · Issued Sep 2026 · Expires Sep 2027 · <a href="https://www.credly.com/badges/158d71ba-f3d2-4238-945f-b6f119c1eabe" target="_blank" rel="noopener">Verify</a><br>(Foundations, Mar 2026 · <a href="https://verify.skilljar.com/c/u9ess5j33kej" target="_blank" rel="noopener">Verify</a>)</p>
                 </div>
             </div>
 
@@ -2158,32 +2163,8 @@
             <div class="cert-card reveal">
                 <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
                 <div class="cert-info">
-                    <h4>Azure Administrator Associate</h4>
-                    <p>Microsoft · Issued Sep 2024</p>
-                </div>
-            </div>
-
-            <div class="cert-card reveal">
-                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
-                <div class="cert-info">
                     <h4>Azure Developer Associate</h4>
                     <p>Microsoft · Issued May 2022</p>
-                </div>
-            </div>
-
-            <div class="cert-card reveal">
-                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
-                <div class="cert-info">
-                    <h4>Azure AI Fundamentals</h4>
-                    <p>Microsoft · Issued May 2021</p>
-                </div>
-            </div>
-
-            <div class="cert-card reveal">
-                <div class="cert-icon azure"><i class="fab fa-microsoft"></i></div>
-                <div class="cert-info">
-                    <h4>Azure Fundamentals</h4>
-                    <p>Microsoft · Issued Oct 2019</p>
                 </div>
             </div>
 
@@ -2256,14 +2237,14 @@
 
             <div class="project-card reveal">
                 <h3>Carrier Integration Platform (CIP)</h3>
-                <p>Cloud-ready B2B integration platform built on SOA, automating transactions with carriers like UPS, FedEx, and USPS. Single-handedly designed and delivered with a lean team.</p>
+                <p>Cloud-ready B2B integration platform built on SOA, automating transactions with carriers like UPS, FedEx, and USPS. Headed architecture and design for a lean team; built as a client-demo POC and later released as open source.</p>
                 <div class="project-tech">Java · JavaScript · CSS · HTML · XSLT</div>
                 <a href="https://github.com/anishthanaseelan/cip" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="project-card reveal">
                 <h3>Automated Quality Compliance (AQCV)</h3>
-                <p>Platform-agnostic static code quality analysis and reporting tool for ESQL/C languages, designed for easy plug-and-play of compliance rules, monitoring and enforcement.</p>
+                <p>Platform-agnostic static code quality analysis and reporting tool for ESQL/C languages, designed for easy plug-and-play of compliance rules, monitoring and enforcement. Built as my MS (Software Engineering) thesis project, outside the Cognizant environment, and released as open source.</p>
                 <div class="project-tech">Perl · Tk/Perl · HTML</div>
                 <a href="https://github.com/anishthanaseelan/AQCV" class="project-link" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
